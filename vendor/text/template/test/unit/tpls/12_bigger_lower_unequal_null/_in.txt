@@ -1,0 +1,17 @@
+1: IN = 4 , t1: {= t1}
+{if t1 < 10.4}
+2: OUT
+{/if}
+{if t1 == 10.4}
+3: IN
+{/if}
+{if t1 > 10.4}
+4: out
+{/if}
+{if t1 != 10.4}
+5: OUT
+{/if}
+{if t1 == NULL}
+6: OUT
+{/if}
+7: IN

@@ -1,0 +1,42 @@
+{
+    "name": "swoft/cache",
+    "type": "library",
+    "keywords": [
+        "php",
+        "swoole",
+        "swoft",
+        "cache"
+    ],
+    "description": "Cache Component for Swoft",
+    "license": "Apache-2.0",
+    "require": {
+        "psr/simple-cache": "^1.0.0",
+        "swoft/redis": "^1.0",
+        "swoft/framework": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Swoft\\Cache\\": "src/"
+        },
+        "files": [
+            "src/Helper/Functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SwoftTest\\Cache\\": "test/Cases"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit -c phpunit.xml"
+    }
+}

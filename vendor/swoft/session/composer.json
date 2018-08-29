@@ -1,0 +1,43 @@
+{
+    "name": "swoft/session",
+    "type": "library",
+    "keywords": [
+        "php",
+        "swoole",
+        "swoft",
+        "session"
+    ],
+    "description": "Session Component for Swoft",
+    "license": "Apache-2.0",
+    "require": {
+        "swoft/framework": "^1.0",
+        "swoft/http-message": "^1.0",
+        "swoft/redis": "^1.0",
+        "nesbot/carbon": "^1.22"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Swoft\\Session\\": "src/"
+        },
+        "files": [
+            "src/Helper/Functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SwoftTest\\Session\\": "test/Cases"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    ],
+    "scripts": {
+        "test": "./vendor/bin/phpunit -c phpunit.xml"
+    }
+}

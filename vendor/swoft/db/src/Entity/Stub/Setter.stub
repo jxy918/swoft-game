@@ -1,0 +1,11 @@
+    /**
+{{comment}}
+     * @param {{type}}$value
+     * @return $this
+     */
+    public function {{function}}({{type}}$value){{hasReturnType}}
+    {
+        $this->{{attribute}} = $value;
+
+        return $this;
+    }
