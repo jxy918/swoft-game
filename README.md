@@ -2,7 +2,7 @@
 
 * 基于swoft框架开游戏服务器框架（把自己写的游戏框架swoole-game，移植到swoft框架上，可以使用swoft框架的丰富组件功能）
 
-* 查看原框架：**[swoole-game](https://github.com/jxy918/swoole-game/blob/master/README.md)**
+* 查看原框架：**[swoole-game](https://github.com/jxy918/swoole-game)**
 
 ### 一，概述
 
