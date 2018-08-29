@@ -1,7 +1,0 @@
-    /**
-{{comment}}
-{{@Id}}
-     * @Column(name="{{property}}", type={{type}}{{length}}{{default}})
-{{@Required}}
-     */
-    private ${{aliasProperty}}{{hasDefault}}

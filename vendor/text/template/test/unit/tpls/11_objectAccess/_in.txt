@@ -1,8 +1,0 @@
-1: IN = 4
-{if t2 == NULL}
-2: IN
-{/if}
-{if t1 == true}
-3: IN
-{/if}
-4: IN

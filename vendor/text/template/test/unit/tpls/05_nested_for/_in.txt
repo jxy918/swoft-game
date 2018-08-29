@@ -1,7 +1,0 @@
-1: Start
-{for curVal in arrVal1}
-{for curVal2 in arrVal2}
-2: curVal = {=curVal}: {=curVal2}
-{/for}
-{/for}
-5: Some other text
