@@ -1,7 +1,0 @@
-title: text/template
-description: Simple string template engine supporting if/loops/filters for PHP5+
-google_analytics:
-show_downloads: true
-
-gems:
-- jekyll-mentions
