@@ -1,0 +1,11 @@
+1: Start
+2: curVal = a: AA
+2: curVal = a: BB
+2: curVal = a: CC
+2: curVal = b: AA
+2: curVal = b: BB
+2: curVal = b: CC
+2: curVal = c: AA
+2: curVal = c: BB
+2: curVal = c: CC
+5: Some other text

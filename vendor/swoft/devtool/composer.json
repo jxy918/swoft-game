@@ -1,0 +1,46 @@
+{
+    "name": "swoft/devtool",
+    "type": "library",
+    "keywords": [
+        "php",
+        "swoole",
+        "swoft",
+        "debug",
+        "devtool"
+    ],
+    "description": "devTool for swoft",
+    "license": "Apache-2.0",
+    "require": {
+        "swoft/console": "^1.0",
+        "swoft/framework": "^1.0",
+        "swoft/data-parser": "^1.0",
+        "seld/phar-utils": "^1.0",
+        "text/template": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Swoft\\Devtool\\": "src/"
+        },
+        "files": [
+            "src/Helper/Functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SwoftTest\\Devtool\\": "test/Cases"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit",
+        "post-package-update": "echo 'Please rerun command: php bin/swoft dev:publish swoft/devtool -f'"
+    }
+}

@@ -1,0 +1,6 @@
+1: xxx
+{# Some Comment #}
+2: curVal{# some
+multiline
+comment #}
+5: xxx

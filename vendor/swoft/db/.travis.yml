@@ -1,0 +1,83 @@
+language: php
+
+php:
+  - 7.0
+  - 7.1
+  - 7.2
+
+services:
+    - mysql
+
+before_install:
+    - mysql -e 'CREATE DATABASE IF NOT EXISTS test;
+                USE test;
+                CREATE TABLE IF NOT EXISTS `user` (
+                  `id` INT (11) NOT NULL AUTO_INCREMENT,
+                  `name` VARCHAR (20) DEFAULT NULL,
+                  `sex` INT (1) NOT NULL DEFAULT '0',
+                  `age` INT (1) NOT NULL DEFAULT '0',
+                  `description` VARCHAR (240) DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE = INNODB DEFAULT CHARSET = utf8 ;
+                CREATE TABLE `user2` (
+                  `id` INT (11) NOT NULL AUTO_INCREMENT,
+                  `name` VARCHAR (20) DEFAULT NULL,
+                  `sex` INT (1) NOT NULL DEFAULT '0',
+                  `age` INT (1) NOT NULL DEFAULT '0',
+                  `description` VARCHAR (240) DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE = INNODB DEFAULT CHARSET = utf8 ;
+                CREATE TABLE `count` (
+                  `uid` INT (11) NOT NULL,
+                  `fans` INT (1) NOT NULL DEFAULT '0',
+                  `follows` INT (1) NOT NULL DEFAULT '0',
+                  PRIMARY KEY (`uid`)
+                ) ENGINE = INNODB DEFAULT CHARSET = utf8 ;
+                CREATE TABLE `prefix` (
+                  `s_id` int(11) NOT NULL AUTO_INCREMENT,
+                  `s_name` varchar(20) DEFAULT NULL,
+                  PRIMARY KEY (`s_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+                CREATE TABLE `detable` (
+                  `s_id` int(11) NOT NULL AUTO_INCREMENT,
+                  `d_name` varchar(20) DEFAULT NULL,
+                  `d_amount` float DEFAULT '0',
+                  `d_count` int(11) DEFAULT '0',
+                  `dn_amount` float DEFAULT NULL,
+                  `dn_count` int(11) DEFAULT NULL,
+                  `title` varchar(20) NOT NULL DEFAULT "",
+                  `count` int(11) NOT NULL DEFAULT '0',
+                  `amount` float NOT NULL DEFAULT '0',
+                  `books` int(11) NOT NULL,
+                  `short_name` varchar(20) NOT NULL,
+                  `ctime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                  `utime` datetime NOT NULL,
+                  PRIMARY KEY (`s_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+                CREATE TABLE `keyword` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `drop` int(1) NOT NULL DEFAULT '0',
+                  `alert` int(1) NOT NULL DEFAULT '0',
+                  `desc` varchar(240) DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;'
+    - mysql -e 'CREATE DATABASE IF NOT EXISTS test2;
+                USE test2;
+                CREATE TABLE IF NOT EXISTS `user` (
+                  `id` INT (11) NOT NULL AUTO_INCREMENT,
+                  `name` VARCHAR (20) DEFAULT NULL,
+                  `sex` INT (1) NOT NULL DEFAULT '0',
+                  `age` INT (1) NOT NULL DEFAULT '0',
+                  `description` VARCHAR (240) DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE = INNODB DEFAULT CHARSET = utf8 ;'
+
+install:
+  - wget https://github.com/redis/hiredis/archive/v0.13.3.tar.gz -O hiredis.tar.gz && mkdir -p hiredis && tar -xf hiredis.tar.gz -C hiredis --strip-components=1 && cd hiredis && sudo make -j$(nproc) && sudo make install && sudo ldconfig && cd ..
+  - pecl install -f swoole-2.1.1
+
+before_script:
+  - composer config -g process-timeout 900 && composer update
+  - phpenv config-rm xdebug.ini
+
+script: composer test

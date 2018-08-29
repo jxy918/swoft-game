@@ -1,0 +1,53 @@
+{
+    "name": "swoft/framework",
+    "type": "library",
+    "keywords": [
+        "php",
+        "swoole",
+        "swoft"
+    ],
+    "description": "microservice framework base on swoole",
+    "license": "Apache-2.0",
+    "require": {
+        "php": ">=7.0",
+        "phpseclib/phpseclib": "2.0.0",
+        "doctrine/annotations": "^1.4",
+        "php-di/phpdoc-reader": "^2.0",
+        "monolog/monolog": "^1.23",
+        "vlucas/phpdotenv": "^2.4",
+        "psr/http-message": "^1.0",
+        "psr/http-server-middleware": "^1.0",
+        "zendframework/zend-mime": "^2.7"
+    },
+    "autoload": {
+        "classmap": [
+        ],
+        "psr-4": {
+            "Swoft\\": "src/"
+        },
+        "files": [
+            "src/Helper/Functions.php"
+        ]
+    },
+    "require-dev": {
+        "swoft/swoole-ide-helper": "dev-master",
+        "phpunit/phpunit": "^5.7",
+        "friendsofphp/php-cs-fixer": "^2.10",
+        "psy/psysh": "@stable"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SwoftTest\\": "test/Cases"
+        }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit -c phpunit.xml",
+        "cs-fix": "./vendor/bin/php-cs-fixer fix $1"
+    }
+}

@@ -1,0 +1,15 @@
+# Kickstart container config file - see https://gitub.com/c7lab/kickstart
+# Run ./kickstart.sh to start a development-container for this project
+
+version: 1
+
+## Use Gaia-flavor (apache2 php7.1) see: https://github.com/c7lab/kickstart-flavor-gaia
+from: "continue/kickstart-flavor-gaia"
+
+
+command:
+  init:
+    - "composer update"
+
+  test:
+    - "./vendor/bin/tester -p /usr/bin/php -c test/php.ini --coverage ./build/logs/clover.xml --coverage-src ./src -s ./test/"

@@ -1,0 +1,1728 @@
+[2018-08-29 17:32:20 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x7fd85f27d010.
+[2018-08-29 17:32:22 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x7fd85f27d010
+[2018-08-29 17:32:25 #57878.1]	TRACE	[Master] Accept new connection. maxfd=4|reactor_id=1|conn=16
+[2018-08-29 17:32:25 #57878.1]	TRACE	[Master] Accept new connection. maxfd=16|reactor_id=1|conn=17
+[2018-08-29 17:32:25 #57878.1]	TRACE	[Master] Accept new connection. maxfd=17|reactor_id=1|conn=18
+[2018-08-29 17:32:25 #57878.1]	TRACE	[Master] Accept new connection. maxfd=18|reactor_id=1|conn=19
+[2018-08-29 17:32:25 #57878.1]	TRACE	[Master] Accept new connection. maxfd=19|reactor_id=1|conn=20
+[2018-08-29 17:32:25 #57878.1]	TRACE	[Master] Accept new connection. maxfd=20|reactor_id=1|conn=21
+[2018-08-29 17:32:25 #57878.0]	TRACE	send string package, size=437 bytes.
+[2018-08-29 17:32:25 #57878.0]	TRACE	dispatch, type=10|len=437
+
+[2018-08-29 17:32:25 *57882.0]	TRACE	httpRequest 437 bytes:
+---------------------------------------
+GET /test HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:32:25 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:25 *57882.0]	TRACE	[Worker] send: sendn=3384|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Swoft-Devtool-Version: 1.0.0
+Content-Type: text/html
+X-Powered-By: Swoft
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:32:24 GMT
+Content-Length: 3166
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Testing swoole-h5game</title>  
+</head>  
+<body>  
+    <form align=center>
+    <h1>swoole-h5game Testå·¥å…·</h1>  
+    <div >  
+       
+[2018-08-29 17:32:25 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3268670.
+[2018-08-29 17:32:25 *57882.0]	TRACE	threads=0x30682d0|params=0x3468680
+[2018-08-29 17:32:25 *57882.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 149)
+[2018-08-29 17:32:25 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:25 *57882.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:32:25 *57882.0]	TRACE	aio_thread ok. ret=149, error=0
+[2018-08-29 17:32:25 *57882.0]	DEBUG	sw_coro_resume(:294): cid=3
+[2018-08-29 17:32:25 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3268670
+[2018-08-29 17:32:25 #57878.0]	TRACE	send string package, size=427 bytes.
+[2018-08-29 17:32:25 #57878.0]	TRACE	dispatch, type=10|len=427
+
+[2018-08-29 17:32:25 *57882.0]	TRACE	httpRequest 427 bytes:
+---------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.7.197:10000/test
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:32:25 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:25 *57882.0]	TRACE	[Worker] send: sendn=330|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=utf-8
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:32:24 GMT
+Content-Length: 143
+
+{"msg":"access favicon.ico","file":"\/apps\/swoft-game\/vendor\/swoft\/http-server\/src\/Middleware\/SwoftMiddleware.php","line":35,"code":406}
+EOF
+[2018-08-29 17:32:25 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3268670.
+[2018-08-29 17:32:25 *57882.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 157)
+[2018-08-29 17:32:25 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x34e8c60.
+[2018-08-29 17:32:25 *57882.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/error.log, 303)
+[2018-08-29 17:32:25 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:25 *57882.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:32:25 *57882.0]	TRACE	aio_thread ok. ret=157, error=0
+[2018-08-29 17:32:25 *57882.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:32:25 *57882.0]	TRACE	aio_thread ok. ret=303, error=0
+[2018-08-29 17:32:25 *57882.0]	DEBUG	sw_coro_resume(:294): cid=5
+[2018-08-29 17:32:25 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3268670
+[2018-08-29 17:32:25 *57882.0]	DEBUG	sw_coro_resume(:294): cid=6
+[2018-08-29 17:32:25 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x34e8c60
+[2018-08-29 17:32:25 *57882.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:32:29 #57878.1]	TRACE	[Master] Accept new connection. maxfd=21|reactor_id=1|conn=22
+[2018-08-29 17:32:29 #57878.0]	TRACE	send string package, size=524 bytes.
+[2018-08-29 17:32:29 #57878.0]	TRACE	dispatch, type=10|len=524
+
+[2018-08-29 17:32:29 *57882.0]	TRACE	httpRequest 524 bytes:
+---------------------------------------
+GET /game HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade: websocket
+Origin: http://192.168.7.197:10000
+Sec-WebSocket-Version: 13
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+Sec-WebSocket-Key: Eb1f2QYbN7EY9InK3AaWUw
+[2018-08-29 17:32:29 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:29 *57882.0]	TRACE	[Worker] send: sendn=196|type=0|content=<<EOF
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-Websocket-Accept: yLXvWSBFbbYHkx7bSsZ2mNPKLho=
+Sec-Websocket-Version: 13
+Server: swoole-http-server
+
+
+EOF
+[2018-08-29 17:32:29 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:29 *57882.0]	TRACE	[Worker] send: sendn=57|type=0|content=<<EOF
+‚+
+EOF
+[2018-08-29 17:32:31 #57878.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:32:31 #57878.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:32:31 #57878.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:32:31 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:31 *57882.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:32:31 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:32 #57878.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:32:32 #57878.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:32:32 #57878.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:32:32 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:32 *57882.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:32:32 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:32 #57878.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:32:32 #57878.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:32:32 #57878.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:32:32 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:32 *57882.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:32:32 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:32 #57878.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:32:32 #57878.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:32:32 #57878.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:32:32 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:32 *57882.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:32:32 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:33 #57878.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:32:33 #57878.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:32:33 #57878.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:32:33 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:33 *57882.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:32:33 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:33 #57878.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:32:33 #57878.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:32:33 #57878.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:32:33 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:33 *57882.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:32:33 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:36 #57878.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:32:36 #57878.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:32:36 #57878.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:32:36 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:36 *57882.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:32:36 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:36 #57878.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:32:36 #57878.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:32:36 #57878.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:32:36 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:36 *57882.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:32:36 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:36 #57878.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:32:36 #57878.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:32:36 #57878.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:32:36 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:36 *57882.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:32:36 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:32:36 #57878.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:32:36 #57878.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:32:36 #57878.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:32:36 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:32:36 *57882.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:32:36 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:35:02 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:35:02 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:35:02 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:35:02 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:35:02 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:35:02 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:35:02 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:35:02 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:35:02 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:35:02 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:35:02 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:35:02 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:35:02 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:35:02 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:35:02 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:35:02 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:35:02 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:35:02 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:35:02 #57878.0]	TRACE	Close Event.fd=17|from=0
+[2018-08-29 17:35:02 #57878.0]	TRACE	Close Event.fd=18|from=0
+[2018-08-29 17:35:02 #57878.0]	TRACE	Close Event.fd=19|from=0
+[2018-08-29 17:35:02 #57878.0]	TRACE	Close Event.fd=20|from=0
+[2018-08-29 17:35:02 #57878.0]	TRACE	Close Event.fd=21|from=0
+[2018-08-29 17:35:02 #57878.0]	TRACE	Close Event.fd=16|from=0
+[2018-08-29 17:36:30 #57878.1]	TRACE	[Master] Accept new connection. maxfd=22|reactor_id=1|conn=16
+[2018-08-29 17:36:30 #57878.1]	TRACE	[Master] Accept new connection. maxfd=22|reactor_id=1|conn=17
+[2018-08-29 17:36:30 #57878.1]	TRACE	[Master] Accept new connection. maxfd=22|reactor_id=1|conn=18
+[2018-08-29 17:36:30 #57878.1]	TRACE	[Master] Accept new connection. maxfd=22|reactor_id=1|conn=19
+[2018-08-29 17:36:30 #57878.1]	TRACE	[Master] Accept new connection. maxfd=22|reactor_id=1|conn=20
+[2018-08-29 17:36:30 #57878.0]	TRACE	send string package, size=437 bytes.
+[2018-08-29 17:36:30 #57878.0]	TRACE	dispatch, type=10|len=437
+
+[2018-08-29 17:36:30 *57882.0]	TRACE	httpRequest 437 bytes:
+---------------------------------------
+GET /test HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:36:30 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:36:30 *57882.0]	TRACE	[Worker] send: sendn=3384|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Swoft-Devtool-Version: 1.0.0
+Content-Type: text/html
+X-Powered-By: Swoft
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:36:30 GMT
+Content-Length: 3166
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Testing swoole-h5game</title>  
+</head>  
+<body>  
+    <form align=center>
+    <h1>swoole-h5game Testå·¥å…·</h1>  
+    <div >  
+       
+[2018-08-29 17:36:30 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x34e8bc0.
+[2018-08-29 17:36:30 *57882.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 150)
+[2018-08-29 17:36:30 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:36:30 *57882.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:36:30 *57882.0]	TRACE	aio_thread ok. ret=150, error=0
+[2018-08-29 17:36:30 *57882.0]	DEBUG	sw_coro_resume(:294): cid=25
+[2018-08-29 17:36:30 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x34e8bc0
+[2018-08-29 17:36:30 #57878.0]	TRACE	header_length=6, payload_length=2
+[2018-08-29 17:36:30 #57878.0]	TRACE	Close Event.FD=22|From=0
+[2018-08-29 17:36:30 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:36:30 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:36:30 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:36:30 #57878.0]	TRACE	Close Event.fd=22|from=0
+[2018-08-29 17:36:30 #57878.0]	TRACE	set_maxfd=21|close_fd=22
+
+[2018-08-29 17:36:31 #57878.1]	TRACE	[Master] Accept new connection. maxfd=20|reactor_id=1|conn=21
+[2018-08-29 17:36:31 #57878.0]	TRACE	send string package, size=524 bytes.
+[2018-08-29 17:36:31 #57878.0]	TRACE	dispatch, type=10|len=524
+
+[2018-08-29 17:36:31 *57882.0]	TRACE	httpRequest 524 bytes:
+---------------------------------------
+GET /game HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade: websocket
+Origin: http://192.168.7.197:10000
+Sec-WebSocket-Version: 13
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+Sec-WebSocket-Key: ciWfuEVrfVRfAbIwIyARUA
+[2018-08-29 17:36:31 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:36:31 *57882.0]	TRACE	[Worker] send: sendn=196|type=0|content=<<EOF
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-Websocket-Accept: z52mtoF6uc77RNdVit+hQmiFVrE=
+Sec-Websocket-Version: 13
+Server: swoole-http-server
+
+
+EOF
+[2018-08-29 17:36:31 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:36:31 *57882.0]	TRACE	[Worker] send: sendn=57|type=0|content=<<EOF
+‚+
+EOF
+[2018-08-29 17:36:31 #57878.0]	TRACE	send string package, size=384 bytes.
+[2018-08-29 17:36:31 #57878.0]	TRACE	dispatch, type=10|len=384
+
+[2018-08-29 17:36:31 *57882.0]	TRACE	httpRequest 384 bytes:
+---------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.7.197:10000/test
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:36:31 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:36:31 *57882.0]	TRACE	[Worker] send: sendn=330|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=utf-8
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:36:30 GMT
+Content-Length: 143
+
+{"msg":"access favicon.ico","file":"\/apps\/swoft-game\/vendor\/swoft\/http-server\/src\/Middleware\/SwoftMiddleware.php","line":35,"code":406}
+EOF
+[2018-08-29 17:36:31 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x34e8bc0.
+[2018-08-29 17:36:31 *57882.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 157)
+[2018-08-29 17:36:31 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x36e8bd0.
+[2018-08-29 17:36:31 *57882.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/error.log, 303)
+[2018-08-29 17:36:31 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:36:31 *57882.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:36:31 *57882.0]	TRACE	aio_thread ok. ret=157, error=0
+[2018-08-29 17:36:31 *57882.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:36:31 *57882.0]	TRACE	aio_thread ok. ret=303, error=0
+[2018-08-29 17:36:31 *57882.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:36:31 *57882.0]	DEBUG	sw_coro_resume(:294): cid=29
+[2018-08-29 17:36:31 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x34e8bc0
+[2018-08-29 17:36:31 *57882.0]	DEBUG	sw_coro_resume(:294): cid=30
+[2018-08-29 17:36:31 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x36e8bd0
+[2018-08-29 17:36:32 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:36:32 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:36:32 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:36:32 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:36:32 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:36:32 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:36:32 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:36:32 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:36:32 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:36:32 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:36:32 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:36:32 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:36:32 *57882.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3068660.
+[2018-08-29 17:36:32 *57882.0]	DEBUG	~Context(:38): free stack: ptr=0x3068660
+[2018-08-29 17:36:32 *57882.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:36:32 #57878.0]	TRACE	Close Event.fd=17|from=0
+[2018-08-29 17:36:32 #57878.0]	TRACE	Close Event.fd=18|from=0
+[2018-08-29 17:36:32 #57878.0]	TRACE	Close Event.fd=19|from=0
+[2018-08-29 17:36:33 #57878.0]	TRACE	Close Event.fd=20|from=0
+[2018-08-29 17:36:33 #57878.0]	TRACE	Close Event.fd=16|from=0
+[2018-08-29 17:39:54 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x7f989787d010.
+[2018-08-29 17:39:55 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x7f989787d010
+[2018-08-29 17:39:56 #57897.1]	TRACE	[Master] Accept new connection. maxfd=4|reactor_id=1|conn=16
+[2018-08-29 17:39:56 #57897.1]	TRACE	[Master] Accept new connection. maxfd=16|reactor_id=1|conn=17
+[2018-08-29 17:39:57 #57897.1]	TRACE	[Master] Accept new connection. maxfd=17|reactor_id=1|conn=18
+[2018-08-29 17:39:57 #57897.1]	TRACE	[Master] Accept new connection. maxfd=18|reactor_id=1|conn=19
+[2018-08-29 17:39:57 #57897.0]	TRACE	send string package, size=437 bytes.
+[2018-08-29 17:39:57 #57897.0]	TRACE	dispatch, type=10|len=437
+
+[2018-08-29 17:39:57 *57901.0]	TRACE	httpRequest 437 bytes:
+---------------------------------------
+GET /test HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:39:57 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:39:57 *57901.0]	TRACE	[Worker] send: sendn=3384|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Swoft-Devtool-Version: 1.0.0
+Content-Type: text/html
+X-Powered-By: Swoft
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:39:56 GMT
+Content-Length: 3166
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Testing swoole-h5game</title>  
+</head>  
+<body>  
+    <form align=center>
+    <h1>swoole-h5game Testå·¥å…·</h1>  
+    <div >  
+       
+[2018-08-29 17:39:57 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x31d3670.
+[2018-08-29 17:39:57 *57901.0]	TRACE	threads=0x2fd32d0|params=0x33d3680
+[2018-08-29 17:39:57 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 148)
+[2018-08-29 17:39:57 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:39:57 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:39:57 *57901.0]	TRACE	aio_thread ok. ret=148, error=0
+[2018-08-29 17:39:57 *57901.0]	DEBUG	sw_coro_resume(:294): cid=3
+[2018-08-29 17:39:57 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x31d3670
+[2018-08-29 17:39:57 #57897.1]	TRACE	[Master] Accept new connection. maxfd=19|reactor_id=1|conn=20
+[2018-08-29 17:39:57 #57897.0]	TRACE	send string package, size=524 bytes.
+[2018-08-29 17:39:57 #57897.0]	TRACE	dispatch, type=10|len=524
+
+[2018-08-29 17:39:57 *57901.0]	TRACE	httpRequest 524 bytes:
+---------------------------------------
+GET /game HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade: websocket
+Origin: http://192.168.7.197:10000
+Sec-WebSocket-Version: 13
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+Sec-WebSocket-Key: CFmOPWKk8Po8rJ/c+EXwBQ
+[2018-08-29 17:39:57 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:39:57 *57901.0]	TRACE	[Worker] send: sendn=196|type=0|content=<<EOF
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-Websocket-Accept: iFOpQ+LjdDUpi8ZkpNOSD75yujA=
+Sec-Websocket-Version: 13
+Server: swoole-http-server
+
+
+EOF
+[2018-08-29 17:39:57 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:39:57 *57901.0]	TRACE	[Worker] send: sendn=57|type=0|content=<<EOF
+‚+
+EOF
+[2018-08-29 17:39:57 #57897.0]	TRACE	send string package, size=384 bytes.
+[2018-08-29 17:39:57 #57897.0]	TRACE	dispatch, type=10|len=384
+
+[2018-08-29 17:39:57 *57901.0]	TRACE	httpRequest 384 bytes:
+---------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.7.197:10000/test
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:39:57 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:39:57 *57901.0]	TRACE	[Worker] send: sendn=330|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=utf-8
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:39:57 GMT
+Content-Length: 143
+
+{"msg":"access favicon.ico","file":"\/apps\/swoft-game\/vendor\/swoft\/http-server\/src\/Middleware\/SwoftMiddleware.php","line":35,"code":406}
+EOF
+[2018-08-29 17:39:57 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453c10.
+[2018-08-29 17:39:57 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 157)
+[2018-08-29 17:39:57 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3653c20.
+[2018-08-29 17:39:57 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/error.log, 303)
+[2018-08-29 17:39:57 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:39:57 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:39:57 *57901.0]	TRACE	aio_thread ok. ret=157, error=0
+[2018-08-29 17:39:57 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:39:57 *57901.0]	TRACE	aio_thread ok. ret=303, error=0
+[2018-08-29 17:39:57 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:39:57 *57901.0]	DEBUG	sw_coro_resume(:294): cid=6
+[2018-08-29 17:39:57 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453c10
+[2018-08-29 17:39:57 *57901.0]	DEBUG	sw_coro_resume(:294): cid=7
+[2018-08-29 17:39:57 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3653c20
+[2018-08-29 17:40:02 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:02 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:02 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:03 #57897.0]	TRACE	Close Event.fd=17|from=0
+[2018-08-29 17:40:03 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:03 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:03 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:03 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:03 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:03 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:03 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:03 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:03 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:03 #57897.0]	TRACE	Close Event.fd=18|from=0
+[2018-08-29 17:40:03 #57897.0]	TRACE	Close Event.fd=19|from=0
+[2018-08-29 17:40:03 #57897.0]	TRACE	Close Event.fd=16|from=0
+[2018-08-29 17:40:10 #57897.1]	TRACE	[Master] Accept new connection. maxfd=20|reactor_id=1|conn=16
+[2018-08-29 17:40:10 #57897.1]	TRACE	[Master] Accept new connection. maxfd=20|reactor_id=1|conn=17
+[2018-08-29 17:40:10 #57897.1]	TRACE	[Master] Accept new connection. maxfd=20|reactor_id=1|conn=18
+[2018-08-29 17:40:10 #57897.1]	TRACE	[Master] Accept new connection. maxfd=20|reactor_id=1|conn=19
+[2018-08-29 17:40:10 #57897.0]	TRACE	send string package, size=437 bytes.
+[2018-08-29 17:40:10 #57897.0]	TRACE	dispatch, type=10|len=437
+
+[2018-08-29 17:40:10 *57901.0]	TRACE	httpRequest 437 bytes:
+---------------------------------------
+GET /test HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:40:10 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:10 *57901.0]	TRACE	[Worker] send: sendn=3384|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Swoft-Devtool-Version: 1.0.0
+Content-Type: text/html
+X-Powered-By: Swoft
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:40:10 GMT
+Content-Length: 3166
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Testing swoole-h5game</title>  
+</head>  
+<body>  
+    <form align=center>
+    <h1>swoole-h5game Testå·¥å…·</h1>  
+    <div >  
+       
+[2018-08-29 17:40:10 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:40:10 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 150)
+[2018-08-29 17:40:10 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:10 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:40:10 *57901.0]	TRACE	aio_thread ok. ret=150, error=0
+[2018-08-29 17:40:10 *57901.0]	DEBUG	sw_coro_resume(:294): cid=13
+[2018-08-29 17:40:10 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:40:10 #57897.0]	TRACE	header_length=6, payload_length=2
+[2018-08-29 17:40:10 #57897.0]	TRACE	Close Event.FD=20|From=0
+[2018-08-29 17:40:10 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:10 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:10 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:10 #57897.0]	TRACE	Close Event.fd=20|from=0
+[2018-08-29 17:40:10 #57897.0]	TRACE	set_maxfd=19|close_fd=20
+
+[2018-08-29 17:40:10 #57897.1]	TRACE	[Master] Accept new connection. maxfd=19|reactor_id=1|conn=20
+[2018-08-29 17:40:10 #57897.0]	TRACE	send string package, size=524 bytes.
+[2018-08-29 17:40:10 #57897.0]	TRACE	dispatch, type=10|len=524
+
+[2018-08-29 17:40:10 *57901.0]	TRACE	httpRequest 524 bytes:
+---------------------------------------
+GET /game HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade: websocket
+Origin: http://192.168.7.197:10000
+Sec-WebSocket-Version: 13
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+Sec-WebSocket-Key: Xf0dOiiLNXvSKS9sjyZOAQ
+[2018-08-29 17:40:10 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:10 *57901.0]	TRACE	[Worker] send: sendn=196|type=0|content=<<EOF
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-Websocket-Accept: tMLXNDU2714wnm8UMb3tHM+6C1c=
+Sec-Websocket-Version: 13
+Server: swoole-http-server
+
+
+EOF
+[2018-08-29 17:40:10 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:10 *57901.0]	TRACE	[Worker] send: sendn=57|type=0|content=<<EOF
+‚+
+EOF
+[2018-08-29 17:40:10 #57897.0]	TRACE	send string package, size=384 bytes.
+[2018-08-29 17:40:10 #57897.0]	TRACE	dispatch, type=10|len=384
+
+[2018-08-29 17:40:10 *57901.0]	TRACE	httpRequest 384 bytes:
+---------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.7.197:10000/test
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:40:10 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:10 *57901.0]	TRACE	[Worker] send: sendn=330|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=utf-8
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:40:10 GMT
+Content-Length: 143
+
+{"msg":"access favicon.ico","file":"\/apps\/swoft-game\/vendor\/swoft\/http-server\/src\/Middleware\/SwoftMiddleware.php","line":35,"code":406}
+EOF
+[2018-08-29 17:40:10 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:40:10 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 157)
+[2018-08-29 17:40:10 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3653bd0.
+[2018-08-29 17:40:10 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/error.log, 303)
+[2018-08-29 17:40:10 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:10 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:40:10 *57901.0]	TRACE	aio_thread ok. ret=157, error=0
+[2018-08-29 17:40:10 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:40:10 *57901.0]	TRACE	aio_thread ok. ret=303, error=0
+[2018-08-29 17:40:10 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:40:10 *57901.0]	DEBUG	sw_coro_resume(:294): cid=17
+[2018-08-29 17:40:10 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:40:10 *57901.0]	DEBUG	sw_coro_resume(:294): cid=18
+[2018-08-29 17:40:10 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3653bd0
+[2018-08-29 17:40:13 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:13 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:13 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:13 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:13 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:13 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:13 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:13 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:13 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:13 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:13 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:13 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:13 #57897.0]	TRACE	Close Event.fd=17|from=0
+[2018-08-29 17:40:13 #57897.0]	TRACE	Close Event.fd=18|from=0
+[2018-08-29 17:40:13 #57897.0]	TRACE	Close Event.fd=19|from=0
+[2018-08-29 17:40:13 #57897.0]	TRACE	Close Event.fd=16|from=0
+[2018-08-29 17:40:29 #57897.1]	TRACE	[Master] Accept new connection. maxfd=20|reactor_id=1|conn=16
+[2018-08-29 17:40:29 #57897.1]	TRACE	[Master] Accept new connection. maxfd=20|reactor_id=1|conn=17
+[2018-08-29 17:40:29 #57897.1]	TRACE	[Master] Accept new connection. maxfd=20|reactor_id=1|conn=18
+[2018-08-29 17:40:29 #57897.0]	TRACE	send string package, size=437 bytes.
+[2018-08-29 17:40:29 #57897.0]	TRACE	dispatch, type=10|len=437
+
+[2018-08-29 17:40:29 *57901.0]	TRACE	httpRequest 437 bytes:
+---------------------------------------
+GET /test HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:40:29 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:29 *57901.0]	TRACE	[Worker] send: sendn=3384|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Swoft-Devtool-Version: 1.0.0
+Content-Type: text/html
+X-Powered-By: Swoft
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:40:29 GMT
+Content-Length: 3166
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Testing swoole-h5game</title>  
+</head>  
+<body>  
+    <form align=center>
+    <h1>swoole-h5game Testå·¥å…·</h1>  
+    <div >  
+       
+[2018-08-29 17:40:29 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:40:29 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 150)
+[2018-08-29 17:40:29 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:29 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:40:29 *57901.0]	TRACE	aio_thread ok. ret=150, error=0
+[2018-08-29 17:40:29 *57901.0]	DEBUG	sw_coro_resume(:294): cid=24
+[2018-08-29 17:40:29 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:40:29 #57897.0]	TRACE	header_length=6, payload_length=2
+[2018-08-29 17:40:29 #57897.0]	TRACE	Close Event.FD=20|From=0
+[2018-08-29 17:40:29 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:29 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:29 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:29 #57897.0]	TRACE	Close Event.fd=20|from=0
+[2018-08-29 17:40:29 #57897.0]	TRACE	set_maxfd=19|close_fd=20
+
+[2018-08-29 17:40:29 #57897.1]	TRACE	[Master] Accept new connection. maxfd=18|reactor_id=1|conn=19
+[2018-08-29 17:40:29 #57897.0]	TRACE	send string package, size=524 bytes.
+[2018-08-29 17:40:29 #57897.0]	TRACE	dispatch, type=10|len=524
+
+[2018-08-29 17:40:29 *57901.0]	TRACE	httpRequest 524 bytes:
+---------------------------------------
+GET /game HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade: websocket
+Origin: http://192.168.7.197:10000
+Sec-WebSocket-Version: 13
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+Sec-WebSocket-Key: MLZPySBk/u9orC2QlFfarg
+[2018-08-29 17:40:29 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:29 *57901.0]	TRACE	[Worker] send: sendn=196|type=0|content=<<EOF
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-Websocket-Accept: dDQHFo1Vp/JgfKE0H8I6xvvPDdw=
+Sec-Websocket-Version: 13
+Server: swoole-http-server
+
+
+EOF
+[2018-08-29 17:40:29 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:29 *57901.0]	TRACE	[Worker] send: sendn=57|type=0|content=<<EOF
+‚+
+EOF
+[2018-08-29 17:40:29 #57897.0]	TRACE	send string package, size=384 bytes.
+[2018-08-29 17:40:29 #57897.0]	TRACE	dispatch, type=10|len=384
+
+[2018-08-29 17:40:29 *57901.0]	TRACE	httpRequest 384 bytes:
+---------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.7.197:10000/test
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:40:29 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:29 *57901.0]	TRACE	[Worker] send: sendn=330|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=utf-8
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:40:29 GMT
+Content-Length: 143
+
+{"msg":"access favicon.ico","file":"\/apps\/swoft-game\/vendor\/swoft\/http-server\/src\/Middleware\/SwoftMiddleware.php","line":35,"code":406}
+EOF
+[2018-08-29 17:40:29 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:40:29 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 157)
+[2018-08-29 17:40:29 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3653bd0.
+[2018-08-29 17:40:29 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/error.log, 303)
+[2018-08-29 17:40:29 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:29 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:40:29 *57901.0]	TRACE	aio_thread ok. ret=157, error=0
+[2018-08-29 17:40:29 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:40:29 *57901.0]	TRACE	aio_thread ok. ret=303, error=0
+[2018-08-29 17:40:29 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:40:29 *57901.0]	DEBUG	sw_coro_resume(:294): cid=28
+[2018-08-29 17:40:29 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:40:29 *57901.0]	DEBUG	sw_coro_resume(:294): cid=29
+[2018-08-29 17:40:29 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3653bd0
+[2018-08-29 17:40:30 #57897.0]	TRACE	send string package, size=437 bytes.
+[2018-08-29 17:40:30 #57897.0]	TRACE	dispatch, type=10|len=437
+
+[2018-08-29 17:40:30 *57901.0]	TRACE	httpRequest 437 bytes:
+---------------------------------------
+GET /test HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:40:30 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:30 *57901.0]	TRACE	[Worker] send: sendn=3384|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Swoft-Devtool-Version: 1.0.0
+Content-Type: text/html
+X-Powered-By: Swoft
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:40:30 GMT
+Content-Length: 3166
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Testing swoole-h5game</title>  
+</head>  
+<body>  
+    <form align=center>
+    <h1>swoole-h5game Testå·¥å…·</h1>  
+    <div >  
+       
+[2018-08-29 17:40:30 #57897.0]	TRACE	header_length=6, payload_length=2
+[2018-08-29 17:40:30 #57897.0]	TRACE	Close Event.FD=19|From=0
+[2018-08-29 17:40:30 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:40:30 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 150)
+[2018-08-29 17:40:30 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:30 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:30 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:30 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:30 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:40:30 *57901.0]	TRACE	aio_thread ok. ret=150, error=0
+[2018-08-29 17:40:30 #57897.0]	TRACE	Close Event.fd=19|from=0
+[2018-08-29 17:40:30 #57897.0]	TRACE	set_maxfd=18|close_fd=19
+
+[2018-08-29 17:40:30 *57901.0]	DEBUG	sw_coro_resume(:294): cid=31
+[2018-08-29 17:40:30 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:40:30 #57897.1]	TRACE	[Master] Accept new connection. maxfd=18|reactor_id=1|conn=19
+[2018-08-29 17:40:30 #57897.0]	TRACE	send string package, size=524 bytes.
+[2018-08-29 17:40:30 #57897.0]	TRACE	dispatch, type=10|len=524
+
+[2018-08-29 17:40:30 *57901.0]	TRACE	httpRequest 524 bytes:
+---------------------------------------
+GET /game HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade: websocket
+Origin: http://192.168.7.197:10000
+Sec-WebSocket-Version: 13
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+Sec-WebSocket-Key: j7qb12ldlf2hTUNttT69gg
+[2018-08-29 17:40:30 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:30 *57901.0]	TRACE	[Worker] send: sendn=196|type=0|content=<<EOF
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-Websocket-Accept: Rfo3WZ9C3oLiCtlNUNxNxF1p+yY=
+Sec-Websocket-Version: 13
+Server: swoole-http-server
+
+
+EOF
+[2018-08-29 17:40:30 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:30 *57901.0]	TRACE	[Worker] send: sendn=57|type=0|content=<<EOF
+‚+
+EOF
+[2018-08-29 17:40:30 #57897.0]	TRACE	send string package, size=384 bytes.
+[2018-08-29 17:40:30 #57897.0]	TRACE	dispatch, type=10|len=384
+
+[2018-08-29 17:40:30 *57901.0]	TRACE	httpRequest 384 bytes:
+---------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.7.197:10000/test
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:40:30 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:30 *57901.0]	TRACE	[Worker] send: sendn=330|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=utf-8
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:40:30 GMT
+Content-Length: 143
+
+{"msg":"access favicon.ico","file":"\/apps\/swoft-game\/vendor\/swoft\/http-server\/src\/Middleware\/SwoftMiddleware.php","line":35,"code":406}
+EOF
+[2018-08-29 17:40:30 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:40:30 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 157)
+[2018-08-29 17:40:30 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3653bd0.
+[2018-08-29 17:40:30 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/error.log, 303)
+[2018-08-29 17:40:30 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:30 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:40:30 *57901.0]	TRACE	aio_thread ok. ret=157, error=0
+[2018-08-29 17:40:30 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:40:30 *57901.0]	TRACE	aio_thread ok. ret=303, error=0
+[2018-08-29 17:40:30 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:40:30 *57901.0]	DEBUG	sw_coro_resume(:294): cid=35
+[2018-08-29 17:40:30 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:40:30 *57901.0]	DEBUG	sw_coro_resume(:294): cid=36
+[2018-08-29 17:40:30 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3653bd0
+[2018-08-29 17:40:33 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:33 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:33 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:33 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:33 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:33 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:33 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:33 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:33 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:33 #57897.0]	TRACE	Close Event.fd=17|from=0
+[2018-08-29 17:40:33 #57897.0]	TRACE	Close Event.fd=18|from=0
+[2018-08-29 17:40:33 #57897.0]	TRACE	Close Event.fd=16|from=0
+[2018-08-29 17:40:33 #57897.1]	TRACE	[Master] Accept new connection. maxfd=19|reactor_id=1|conn=16
+[2018-08-29 17:40:33 #57897.1]	TRACE	[Master] Accept new connection. maxfd=19|reactor_id=1|conn=17
+[2018-08-29 17:40:33 #57897.1]	TRACE	[Master] Accept new connection. maxfd=19|reactor_id=1|conn=18
+[2018-08-29 17:40:33 #57897.0]	TRACE	send string package, size=437 bytes.
+[2018-08-29 17:40:33 #57897.0]	TRACE	dispatch, type=10|len=437
+
+[2018-08-29 17:40:33 *57901.0]	TRACE	httpRequest 437 bytes:
+---------------------------------------
+GET /test HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:40:33 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:33 *57901.0]	TRACE	[Worker] send: sendn=3384|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Swoft-Devtool-Version: 1.0.0
+Content-Type: text/html
+X-Powered-By: Swoft
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:40:33 GMT
+Content-Length: 3166
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Testing swoole-h5game</title>  
+</head>  
+<body>  
+    <form align=center>
+    <h1>swoole-h5game Testå·¥å…·</h1>  
+    <div >  
+       
+[2018-08-29 17:40:33 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:40:33 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 150)
+[2018-08-29 17:40:33 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:33 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:40:33 *57901.0]	TRACE	aio_thread ok. ret=150, error=0
+[2018-08-29 17:40:33 *57901.0]	DEBUG	sw_coro_resume(:294): cid=41
+[2018-08-29 17:40:33 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:40:33 #57897.0]	TRACE	header_length=6, payload_length=2
+[2018-08-29 17:40:33 #57897.0]	TRACE	Close Event.FD=19|From=0
+[2018-08-29 17:40:33 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:33 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:33 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:33 #57897.0]	TRACE	Close Event.fd=19|from=0
+[2018-08-29 17:40:33 #57897.0]	TRACE	set_maxfd=18|close_fd=19
+
+[2018-08-29 17:40:33 #57897.1]	TRACE	[Master] Accept new connection. maxfd=18|reactor_id=1|conn=19
+[2018-08-29 17:40:33 #57897.0]	TRACE	send string package, size=524 bytes.
+[2018-08-29 17:40:33 #57897.0]	TRACE	dispatch, type=10|len=524
+
+[2018-08-29 17:40:33 *57901.0]	TRACE	httpRequest 524 bytes:
+---------------------------------------
+GET /game HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade: websocket
+Origin: http://192.168.7.197:10000
+Sec-WebSocket-Version: 13
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+Sec-WebSocket-Key: X9WjsZK1TrecktE5wHgVRQ
+[2018-08-29 17:40:33 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:33 *57901.0]	TRACE	[Worker] send: sendn=196|type=0|content=<<EOF
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-Websocket-Accept: NNVnrpRWCL+HmVoxt4Xw6Kuxd34=
+Sec-Websocket-Version: 13
+Server: swoole-http-server
+
+
+EOF
+[2018-08-29 17:40:33 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:33 *57901.0]	TRACE	[Worker] send: sendn=57|type=0|content=<<EOF
+‚+
+EOF
+[2018-08-29 17:40:33 #57897.0]	TRACE	send string package, size=384 bytes.
+[2018-08-29 17:40:33 #57897.0]	TRACE	dispatch, type=10|len=384
+
+[2018-08-29 17:40:33 *57901.0]	TRACE	httpRequest 384 bytes:
+---------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.7.197:10000/test
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:40:33 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:33 *57901.0]	TRACE	[Worker] send: sendn=330|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=utf-8
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:40:33 GMT
+Content-Length: 143
+
+{"msg":"access favicon.ico","file":"\/apps\/swoft-game\/vendor\/swoft\/http-server\/src\/Middleware\/SwoftMiddleware.php","line":35,"code":406}
+EOF
+[2018-08-29 17:40:33 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:40:33 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 157)
+[2018-08-29 17:40:33 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3653bd0.
+[2018-08-29 17:40:33 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/error.log, 303)
+[2018-08-29 17:40:33 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:33 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:40:33 *57901.0]	TRACE	aio_thread ok. ret=157, error=0
+[2018-08-29 17:40:33 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:40:33 *57901.0]	TRACE	aio_thread ok. ret=303, error=0
+[2018-08-29 17:40:33 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:40:33 *57901.0]	DEBUG	sw_coro_resume(:294): cid=45
+[2018-08-29 17:40:33 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:40:33 *57901.0]	DEBUG	sw_coro_resume(:294): cid=46
+[2018-08-29 17:40:33 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3653bd0
+[2018-08-29 17:40:43 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:43 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:43 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:43 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:43 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:43 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:43 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:40:43 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:40:43 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:40:43 #57897.0]	TRACE	Close Event.fd=17|from=0
+[2018-08-29 17:40:43 #57897.0]	TRACE	Close Event.fd=18|from=0
+[2018-08-29 17:40:43 #57897.0]	TRACE	Close Event.fd=16|from=0
+[2018-08-29 17:41:41 #57897.1]	TRACE	[Master] Accept new connection. maxfd=19|reactor_id=1|conn=16
+[2018-08-29 17:41:41 #57897.1]	TRACE	[Master] Accept new connection. maxfd=19|reactor_id=1|conn=17
+[2018-08-29 17:41:41 #57897.1]	TRACE	[Master] Accept new connection. maxfd=19|reactor_id=1|conn=18
+[2018-08-29 17:41:42 #57897.0]	TRACE	send string package, size=437 bytes.
+[2018-08-29 17:41:42 #57897.0]	TRACE	dispatch, type=10|len=437
+
+[2018-08-29 17:41:42 *57901.0]	TRACE	httpRequest 437 bytes:
+---------------------------------------
+GET /test HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:42 *57901.0]	TRACE	[Worker] send: sendn=3384|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Swoft-Devtool-Version: 1.0.0
+Content-Type: text/html
+X-Powered-By: Swoft
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:41:42 GMT
+Content-Length: 3166
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Testing swoole-h5game</title>  
+</head>  
+<body>  
+    <form align=center>
+    <h1>swoole-h5game Testå·¥å…·</h1>  
+    <div >  
+       
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:41:42 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 150)
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:42 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:41:42 *57901.0]	TRACE	aio_thread ok. ret=150, error=0
+[2018-08-29 17:41:42 #57897.0]	TRACE	header_length=6, payload_length=2
+[2018-08-29 17:41:42 #57897.0]	TRACE	Close Event.FD=19|From=0
+[2018-08-29 17:41:42 *57901.0]	DEBUG	sw_coro_resume(:294): cid=51
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:42 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:41:42 #57897.0]	TRACE	Close Event.fd=19|from=0
+[2018-08-29 17:41:42 #57897.0]	TRACE	set_maxfd=18|close_fd=19
+
+[2018-08-29 17:41:42 #57897.1]	TRACE	[Master] Accept new connection. maxfd=18|reactor_id=1|conn=19
+[2018-08-29 17:41:42 #57897.1]	TRACE	[Master] Accept new connection. maxfd=19|reactor_id=1|conn=20
+[2018-08-29 17:41:42 #57897.1]	TRACE	[Master] Accept new connection. maxfd=20|reactor_id=1|conn=21
+[2018-08-29 17:41:42 #57897.0]	TRACE	ret=3476|task->offset=3476|sendn=3476|filesize=3476
+[2018-08-29 17:41:42 #57897.0]	TRACE	ret=1503|task->offset=1503|sendn=1503|filesize=1503
+[2018-08-29 17:41:42 #57897.0]	TRACE	ret=1731|task->offset=1731|sendn=1731|filesize=1731
+[2018-08-29 17:41:42 #57897.0]	TRACE	ret=1855|task->offset=1855|sendn=1855|filesize=1855
+[2018-08-29 17:41:42 #57897.0]	TRACE	ret=3863|task->offset=3863|sendn=3863|filesize=3863
+[2018-08-29 17:41:42 #57897.0]	TRACE	ret=31484|task->offset=31484|sendn=31484|filesize=31484
+[2018-08-29 17:41:42 #57897.1]	TRACE	[Master] Accept new connection. maxfd=21|reactor_id=1|conn=22
+[2018-08-29 17:41:42 #57897.0]	TRACE	send string package, size=524 bytes.
+[2018-08-29 17:41:42 #57897.0]	TRACE	dispatch, type=10|len=524
+
+[2018-08-29 17:41:42 *57901.0]	TRACE	httpRequest 524 bytes:
+---------------------------------------
+GET /game HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade: websocket
+Origin: http://192.168.7.197:10000
+Sec-WebSocket-Version: 13
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+Sec-WebSocket-Key: xSTIGCzlDAjxeFAMrCL5OQ
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:42 *57901.0]	TRACE	[Worker] send: sendn=196|type=0|content=<<EOF
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-Websocket-Accept: YyXxpONh+fPpRgSDcAuPt7nNmt8=
+Sec-Websocket-Version: 13
+Server: swoole-http-server
+
+
+EOF
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:42 *57901.0]	TRACE	[Worker] send: sendn=57|type=0|content=<<EOF
+‚+
+EOF
+[2018-08-29 17:41:42 #57897.0]	TRACE	send string package, size=384 bytes.
+[2018-08-29 17:41:42 #57897.0]	TRACE	dispatch, type=10|len=384
+
+[2018-08-29 17:41:42 *57901.0]	TRACE	httpRequest 384 bytes:
+---------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.7.197:10000/test
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:42 *57901.0]	TRACE	[Worker] send: sendn=330|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=utf-8
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:41:42 GMT
+Content-Length: 143
+
+{"msg":"access favicon.ico","file":"\/apps\/swoft-game\/vendor\/swoft\/http-server\/src\/Middleware\/SwoftMiddleware.php","line":35,"code":406}
+EOF
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:41:42 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 157)
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3653bd0.
+[2018-08-29 17:41:42 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/error.log, 303)
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:42 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:41:42 *57901.0]	TRACE	aio_thread ok. ret=157, error=0
+[2018-08-29 17:41:42 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:41:42 *57901.0]	TRACE	aio_thread ok. ret=303, error=0
+[2018-08-29 17:41:42 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:41:42 *57901.0]	DEBUG	sw_coro_resume(:294): cid=55
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:41:42 *57901.0]	DEBUG	sw_coro_resume(:294): cid=56
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3653bd0
+[2018-08-29 17:41:42 #57897.0]	TRACE	send string package, size=454 bytes.
+[2018-08-29 17:41:42 #57897.0]	TRACE	dispatch, type=10|len=454
+
+[2018-08-29 17:41:42 *57901.0]	TRACE	httpRequest 454 bytes:
+---------------------------------------
+GET /login HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://192.168.7.197:10000/test
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:42 *57901.0]	TRACE	[Worker] send: sendn=1696|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Swoft-Devtool-Version: 1.0.0
+Content-Type: text/html
+X-Powered-By: Swoft
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:41:42 GMT
+Content-Length: 1478
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <link rel="icon" type="image/GIF" href=""/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,target-densitydpi=high-dpi, minimum-scale=1.0, maximum-s
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:41:42 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 151)
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:42 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:41:42 *57901.0]	TRACE	aio_thread ok. ret=151, error=0
+[2018-08-29 17:41:42 *57901.0]	DEBUG	sw_coro_resume(:294): cid=58
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:41:42 #57897.0]	TRACE	header_length=6, payload_length=2
+[2018-08-29 17:41:42 #57897.0]	TRACE	Close Event.FD=22|From=0
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:42 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:41:42 #57897.0]	TRACE	Close Event.fd=22|from=0
+[2018-08-29 17:41:42 #57897.0]	TRACE	set_maxfd=21|close_fd=22
+
+[2018-08-29 17:41:42 #57897.0]	TRACE	send string package, size=385 bytes.
+[2018-08-29 17:41:42 #57897.0]	TRACE	dispatch, type=10|len=385
+
+[2018-08-29 17:41:42 *57901.0]	TRACE	httpRequest 385 bytes:
+---------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.7.197:10000/login
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+
+
+
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:42 *57901.0]	TRACE	[Worker] send: sendn=330|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=utf-8
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:41:42 GMT
+Content-Length: 143
+
+{"msg":"access favicon.ico","file":"\/apps\/swoft-game\/vendor\/swoft\/http-server\/src\/Middleware\/SwoftMiddleware.php","line":35,"code":406}
+EOF
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:41:42 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 157)
+[2018-08-29 17:41:42 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3653bd0.
+[2018-08-29 17:41:42 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/error.log, 303)
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:42 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:41:42 *57901.0]	TRACE	aio_thread ok. ret=157, error=0
+[2018-08-29 17:41:42 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:41:42 *57901.0]	TRACE	aio_thread ok. ret=303, error=0
+[2018-08-29 17:41:42 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:41:42 *57901.0]	DEBUG	sw_coro_resume(:294): cid=61
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:41:42 *57901.0]	DEBUG	sw_coro_resume(:294): cid=62
+[2018-08-29 17:41:42 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3653bd0
+[2018-08-29 17:41:43 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:43 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:43 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:41:43 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:43 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:43 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:41:43 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:43 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:43 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:41:43 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:43 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:43 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:41:43 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:43 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:43 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:41:43 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:43 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:43 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:41:43 #57897.0]	TRACE	Close Event.fd=16|from=0
+[2018-08-29 17:41:43 #57897.0]	TRACE	Close Event.fd=17|from=0
+[2018-08-29 17:41:43 #57897.0]	TRACE	Close Event.fd=18|from=0
+[2018-08-29 17:41:43 #57897.0]	TRACE	Close Event.fd=19|from=0
+[2018-08-29 17:41:43 #57897.0]	TRACE	Close Event.fd=20|from=0
+[2018-08-29 17:41:43 #57897.0]	TRACE	Close Event.fd=21|from=0
+[2018-08-29 17:41:43 #57897.0]	TRACE	set_maxfd=20|close_fd=21
+
+[2018-08-29 17:41:46 #57897.1]	TRACE	[Master] Accept new connection. maxfd=6|reactor_id=1|conn=16
+[2018-08-29 17:41:46 #57897.0]	TRACE	send string package, size=640 bytes.
+[2018-08-29 17:41:46 #57897.0]	TRACE	dispatch, type=10|len=640
+
+[2018-08-29 17:41:46 *57901.0]	TRACE	httpRequest 640 bytes:
+---------------------------------------
+POST /login HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Content-Length: 53
+Cache-Control: max-age=0
+Origin: http://192.168.7.197:10000
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*
+[2018-08-29 17:41:46 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:46 *57901.0]	TRACE	[Worker] send: sendn=362|type=0|content=<<EOF
+HTTP/1.1 302 Found
+Location: /test
+Swoft-Devtool-Version: 1.0.0
+X-Powered-By: Swoft
+Server: swoole-http-server
+Connection: keep-alive
+Content-Type: text/html
+Date: Wed, 29 Aug 2018 09:41:46 GMT
+Content-Length: 0
+Set-Cookie: USER_INFO=%7B%22account%22%3A%22jxy918%22%7D; expires=Wed, 29-Aug-2018 10:41:46 GMT; path=/; domain=192.168.7.197
+
+
+EOF
+[2018-08-29 17:41:46 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:41:46 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 151)
+[2018-08-29 17:41:46 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:46 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:41:46 *57901.0]	TRACE	aio_thread ok. ret=151, error=0
+[2018-08-29 17:41:46 *57901.0]	DEBUG	sw_coro_resume(:294): cid=70
+[2018-08-29 17:41:46 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:41:46 #57897.0]	TRACE	send string package, size=534 bytes.
+[2018-08-29 17:41:46 #57897.0]	TRACE	dispatch, type=10|len=534
+
+[2018-08-29 17:41:46 *57901.0]	TRACE	httpRequest 534 bytes:
+---------------------------------------
+GET /test HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://192.168.7.197:10000/login
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,z
+[2018-08-29 17:41:46 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:46 *57901.0]	TRACE	[Worker] send: sendn=3384|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Swoft-Devtool-Version: 1.0.0
+Content-Type: text/html
+X-Powered-By: Swoft
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:41:46 GMT
+Content-Length: 3166
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Testing swoole-h5game</title>  
+</head>  
+<body>  
+    <form align=center>
+    <h1>swoole-h5game Testå·¥å…·</h1>  
+    <div >  
+       
+[2018-08-29 17:41:46 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:41:46 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 150)
+[2018-08-29 17:41:46 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:46 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:41:46 *57901.0]	TRACE	aio_thread ok. ret=150, error=0
+[2018-08-29 17:41:46 *57901.0]	DEBUG	sw_coro_resume(:294): cid=72
+[2018-08-29 17:41:46 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:41:46 #57897.1]	TRACE	[Master] Accept new connection. maxfd=16|reactor_id=1|conn=17
+[2018-08-29 17:41:46 #57897.0]	TRACE	send string package, size=578 bytes.
+[2018-08-29 17:41:46 #57897.0]	TRACE	dispatch, type=10|len=578
+
+[2018-08-29 17:41:46 *57901.0]	TRACE	httpRequest 578 bytes:
+---------------------------------------
+GET /game HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade: websocket
+Origin: http://192.168.7.197:10000
+Sec-WebSocket-Version: 13
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+Cookie: USER_INFO=%7B%22account%22%3A%22j
+[2018-08-29 17:41:46 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:46 *57901.0]	TRACE	[Worker] send: sendn=196|type=0|content=<<EOF
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-Websocket-Accept: my4X9zUFjnAOA3/RoRyZ6k6DZGc=
+Sec-Websocket-Version: 13
+Server: swoole-http-server
+
+
+EOF
+[2018-08-29 17:41:46 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:47 #57897.0]	TRACE	send string package, size=438 bytes.
+[2018-08-29 17:41:47 #57897.0]	TRACE	dispatch, type=10|len=438
+
+[2018-08-29 17:41:47 *57901.0]	TRACE	httpRequest 438 bytes:
+---------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.7.197:10000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.7.197:10000/test
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7
+Cookie: USER_INFO=%7B%22account%22%3A%22jxy918%22%7D
+
+
+
+[2018-08-29 17:41:47 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:47 *57901.0]	TRACE	[Worker] send: sendn=330|type=0|content=<<EOF
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=utf-8
+Server: swoole-http-server
+Connection: keep-alive
+Date: Wed, 29 Aug 2018 09:41:46 GMT
+Content-Length: 143
+
+{"msg":"access favicon.ico","file":"\/apps\/swoft-game\/vendor\/swoft\/http-server\/src\/Middleware\/SwoftMiddleware.php","line":35,"code":406}
+EOF
+[2018-08-29 17:41:47 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3453bc0.
+[2018-08-29 17:41:47 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/notice.log, 156)
+[2018-08-29 17:41:47 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x3653bd0.
+[2018-08-29 17:41:47 *57901.0]	TRACE	writeFile(/apps/swoft-game/runtime/logs/error.log, 303)
+[2018-08-29 17:41:47 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:47 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:41:47 *57901.0]	TRACE	aio_thread ok. ret=156, error=0
+[2018-08-29 17:41:47 *57901.0]	TRACE	thread [1] is starting to work
+[2018-08-29 17:41:47 *57901.0]	TRACE	aio_thread ok. ret=303, error=0
+[2018-08-29 17:41:47 *57901.0]	TRACE	thread [0] is starting to work
+[2018-08-29 17:41:47 *57901.0]	DEBUG	sw_coro_resume(:294): cid=75
+[2018-08-29 17:41:47 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3453bc0
+[2018-08-29 17:41:47 *57901.0]	DEBUG	sw_coro_resume(:294): cid=76
+[2018-08-29 17:41:47 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x3653bd0
+[2018-08-29 17:41:48 #57897.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:41:48 #57897.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:41:48 #57897.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:41:48 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:48 *57901.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:41:48 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:49 #57897.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:41:49 #57897.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:41:49 #57897.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:41:49 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:49 *57901.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:41:49 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:49 #57897.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:41:49 #57897.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:41:49 #57897.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:41:49 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:49 *57901.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:41:49 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:49 #57897.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:41:49 #57897.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:41:49 #57897.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:41:49 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:49 *57901.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:41:49 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:53 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:41:53 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:41:53 *57901.0]	TRACE	[Worker] send: sendn=12|type=4|content=<<EOF
+
+EOF
+[2018-08-29 17:41:53 #57897.0]	TRACE	Close Event.fd=16|from=0
+[2018-08-29 17:42:23 #57897.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:42:23 #57897.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:42:23 #57897.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:42:23 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:42:23 *57901.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:42:23 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:42:23 #57897.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:42:23 #57897.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:42:23 #57897.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:42:23 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:42:23 *57901.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:42:23 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:42:23 #57897.0]	TRACE	header_length=6, payload_length=27
+[2018-08-29 17:42:23 #57897.0]	TRACE	send string package, size=29 bytes.
+[2018-08-29 17:42:23 #57897.0]	TRACE	dispatch, type=10|len=29
+
+[2018-08-29 17:42:23 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:42:23 *57901.0]	TRACE	[Worker] send: sendn=60|type=0|content=<<EOF
+‚.
+EOF
+[2018-08-29 17:42:23 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:42:25 #57897.0]	TRACE	header_length=6, payload_length=46
+[2018-08-29 17:42:25 #57897.0]	TRACE	send string package, size=48 bytes.
+[2018-08-29 17:42:25 #57897.0]	TRACE	dispatch, type=10|len=48
+
+[2018-08-29 17:42:25 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:42:25 *57901.0]	TRACE	[Worker] send: sendn=79|type=0|content=<<EOF
+‚A
+EOF
+[2018-08-29 17:42:25 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:42:25 #57897.0]	TRACE	header_length=6, payload_length=46
+[2018-08-29 17:42:25 #57897.0]	TRACE	send string package, size=48 bytes.
+[2018-08-29 17:42:25 #57897.0]	TRACE	dispatch, type=10|len=48
+
+[2018-08-29 17:42:25 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:42:25 *57901.0]	TRACE	[Worker] send: sendn=79|type=0|content=<<EOF
+‚A
+EOF
+[2018-08-29 17:42:25 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:42:25 #57897.0]	TRACE	header_length=6, payload_length=46
+[2018-08-29 17:42:25 #57897.0]	TRACE	send string package, size=48 bytes.
+[2018-08-29 17:42:25 #57897.0]	TRACE	dispatch, type=10|len=48
+
+[2018-08-29 17:42:25 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:42:25 *57901.0]	TRACE	[Worker] send: sendn=79|type=0|content=<<EOF
+‚A
+EOF
+[2018-08-29 17:42:25 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:42:26 #57897.0]	TRACE	header_length=6, payload_length=46
+[2018-08-29 17:42:26 #57897.0]	TRACE	send string package, size=48 bytes.
+[2018-08-29 17:42:26 #57897.0]	TRACE	dispatch, type=10|len=48
+
+[2018-08-29 17:42:26 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:42:26 *57901.0]	TRACE	[Worker] send: sendn=79|type=0|content=<<EOF
+‚A
+EOF
+[2018-08-29 17:42:26 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:42:28 #57897.0]	TRACE	header_length=6, payload_length=12
+[2018-08-29 17:42:28 #57897.0]	TRACE	send string package, size=14 bytes.
+[2018-08-29 17:42:28 #57897.0]	TRACE	dispatch, type=10|len=14
+
+[2018-08-29 17:42:28 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:42:28 *57901.0]	TRACE	[Worker] send: sendn=45|type=0|content=<<EOF
+‚
+EOF
+[2018-08-29 17:42:28 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:42:31 #57897.0]	TRACE	header_length=6, payload_length=7
+[2018-08-29 17:42:31 #57897.0]	TRACE	send string package, size=9 bytes.
+[2018-08-29 17:42:31 #57897.0]	TRACE	dispatch, type=10|len=9
+
+[2018-08-29 17:42:31 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:42:31 *57901.0]	TRACE	[Worker] send: sendn=45|type=0|content=<<EOF
+‚
+EOF
+[2018-08-29 17:42:31 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:42:40 #57897.0]	TRACE	header_length=6, payload_length=7
+[2018-08-29 17:42:40 #57897.0]	TRACE	send string package, size=9 bytes.
+[2018-08-29 17:42:40 #57897.0]	TRACE	dispatch, type=10|len=9
+
+[2018-08-29 17:42:40 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:42:40 *57901.0]	TRACE	[Worker] send: sendn=47|type=0|content=<<EOF
+‚!
+EOF
+[2018-08-29 17:42:40 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660
+[2018-08-29 17:51:46 #57897.0]	TRACE	header_length=6, payload_length=21
+[2018-08-29 17:51:46 #57897.0]	TRACE	send string package, size=23 bytes.
+[2018-08-29 17:51:46 #57897.0]	TRACE	dispatch, type=10|len=23
+
+[2018-08-29 17:51:46 *57901.0]	DEBUG	Context(:16): alloc stack: size=2097152, ptr=0x2fd3660.
+[2018-08-29 17:51:46 *57901.0]	TRACE	[Worker] send: sendn=54|type=0|content=<<EOF
+‚(
+EOF
+[2018-08-29 17:51:46 *57901.0]	DEBUG	~Context(:38): free stack: ptr=0x2fd3660

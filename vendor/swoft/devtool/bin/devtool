@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once dirname(__DIR__) . '/config/define.php';
+
+// init the factory of bean
+\Swoft\Bean\BeanFactory::init();
+
+$console = new \Swoft\Console\Console();
+
+$console->run();
