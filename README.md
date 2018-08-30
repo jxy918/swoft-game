@@ -1,8 +1,8 @@
 # swoft-game
 
-* 基于swoft框架开游戏服务器框架（把自己写的游戏框架swoole-game，移植到swoft框架上，可以使用swoft框架的丰富组件功能）
+* 基于swoft框架开发游戏服务器框架（把自己写的游戏框架swoole-game，移植到swoft框架上，可以使用swoft框架的丰富组件功能）
 
-* 查看原框架：**[swoole-game](https://github.com/jxy918/swoole-game)**
+* 自己写的框架github：**[swoole-game](https://github.com/jxy918/swoole-game)**
 
 ### 一，概述
 
@@ -35,25 +35,32 @@
 ### 四，环境依赖
 
 >依赖swoft环境，请安装php扩展msgpack
-    
-* msgpack 
+ 
+* php
+* swoole   
+* msgpack
+* swoft 
 
     
     
 ### 五，开始使用
+* 1，安装swoft
+```
+composer install
+``` 
 
-* 1，目录说明（swoft目录不具体说明）：
+* 2，目录说明（swoft目录不具体说明）：
 
 ```
-./app/Game                是这个游戏服务器逻辑
-./app/Controller          http路由控制器 
-./app/Websocket           websocket控制器目录
-./public/client			  测试工具view的资源文件
-./resources/views/game    测试工具view
+./app/Game					是这个游戏服务器逻辑
+./app/Controller			http路由控制器 
+./app/Websocket				websocket控制器目录
+./public/client				测试工具view的资源文件
+./resources/views/game		测试工具view
 
 ``` 
          
-* 2，进入根目录目录，启动服务器 ：
+* 3，进入根目录目录，启动服务器(swoft启动websocket启动法） ：
 
 ```
 // 启动服务，根据
@@ -73,19 +80,19 @@ php bin/swoft ws:stop
 
 ```  
 
-* 3访问url：
+* 4，访问url：
 
 ```
 //测试工具访问入口
-http://192.168.7.197:10000/test
+http://[ip]:[port]/test
 
 //广播消息测试， 可以通过次url给websocket广播消息， msg就是消息内容                       
-http://192.168.7.197:10000/broadcast?msg=%E4%BD%A0%E5%A6%B9%E7%9A%84
+http://[ip]:[port]/broadcast?msg=%E4%BD%A0%E5%A6%B9%E7%9A%84
 
 ```
 
 
-* 4 ，H5游戏客户端代码由于公司限制，暂不开放， 但是提供了一个客户端交互测试工具，直接把client目录放入web服务器， 修改客服端配置文件配置websocket链接就能运行。
+* 5 ，H5游戏客户端代码由于公司限制，暂不开放， 但是提供了一个客户端交互测试工具，直接把client目录放入web服务器， 修改客服端配置文件配置websocket链接就能运行。
 
 ### 六，联系方式
 
@@ -93,6 +100,14 @@ http://192.168.7.197:10000/broadcast?msg=%E4%BD%A0%E5%A6%B9%E7%9A%84
 
 ### 七，备注
 
-* swoft的安装请参考swoft框架github
+* 可以使用根目录增加docker运行环境(Dockerfile)， 可以直接执行下面的命令，创建镜像php_swoole, 环境增加php-protobuf，php-msgpack支持。 
+* 注意如果程序不能自动加载，请去除环境中opcache扩展。
+
+```
+docker build -t php_swoole .
+
+```
+
+* 如果使用swoft的Dockerfile需要自行安装msgpack扩展
 * **[swoft框架](https://github.com/swoft-cloud/swoft/)** 
 

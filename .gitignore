@@ -1,0 +1,5 @@
+.idea/
+.git/
+vendor/
+*.lock
+public/devtool/
