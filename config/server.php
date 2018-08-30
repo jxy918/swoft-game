@@ -42,7 +42,7 @@ return [
         'task_queue' => env('CRONTAB_TASK_QUEUE', 2048),
     ],
     'setting' => [
-        'worker_num'            => env('WORKER_NUM', 1),
+        'worker_num'            => env('WORKER_NUM', 4),
         'max_request'           => env('MAX_REQUEST', 10000),
         'daemonize'             => env('DAEMONIZE', 0),
         'dispatch_mode'         => env('DISPATCH_MODE', 2),

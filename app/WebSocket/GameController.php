@@ -35,16 +35,10 @@ use App\Middlewares\GameMiddleware;
 class GameController implements HandlerInterface
 {
     /**
-     * fd和用户uid信息的映射关系
-     * @var array
+     * 用户信息redis的key
      */
-    private $user_map = array();
+    const USER_INFO_KEY = 'user:info:%s';
 
-    /**
-     * 用户登陆信息，其中有用户的fd
-     * @var array
-     */
-    private $user_info = array();
     /**
      * 在这里你可以验证握手的请求信息
      * - 必须返回含有两个元素的array
@@ -79,26 +73,25 @@ class GameController implements HandlerInterface
             $uinfo = json_decode($cookie['USER_INFO'], true);
             //允许连接， 并记录用户信息
             $uinfo['fd'] = $fd;
-            $data = isset($this->user_info[$uinfo['account']]) ? $this->user_info[$uinfo['account']] : array();
+            $user_info_key = sprintf(self::USER_INFO_KEY, $uinfo['account']);
+            $data = cache()->get($user_info_key);
+            $data = json_decode($data, true);
             //之前信息存在， 清除之前的连接
             if(!empty($data)) {
-                //$data = json_decode($data, true);
                 if(isset($data['fd'])) {
                     //处理双开的情况
                     $this->loginFail($server, $data['fd'], '1');
                     $server->close($data['fd']);
-                    unset($this->user_map[$data['fd']]);
-                    unset($this->user_info[$data['account']]);
+                    //清理redis
+                    cache()->delete($user_info_key);
                 }
             }
             //保存登陆信息
             $this->user_info[$uinfo['account']] = $uinfo;
-            //现删除变量数组里之前的值
-            $this->user_map[$fd] = $uinfo['account'];
+            cache()->set($user_info_key, json_encode($uinfo));
         } else {
             $this->loginFail($server, $fd, '2');
         }
-        //var_dump('user_map',$this->user_map, 'user_info', $this->user_info);
     }
 
     /**
@@ -165,12 +158,6 @@ class GameController implements HandlerInterface
     public function onClose(Server $server, int $fd)
     {
         //清除登陆信息变量
-        if(isset($this->user_map[$fd])) {
-            $key = $this->user_map[$fd];
-            unset($this->user_map[$fd]);
-            if(isset($this->user_info[$key])) {
-                unset($this->user_info[$key]);
-            }
-        }
+        $this->loginFail($server, $fd, '3');
     }
 }
