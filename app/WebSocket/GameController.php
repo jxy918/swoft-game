@@ -40,6 +40,11 @@ class GameController implements HandlerInterface
     const USER_INFO_KEY = 'user:info:%s';
 
     /**
+     * 设置key过期时间， 设置为7天
+     */
+    const EXPIRE = 7 * 24 * 60 * 60;
+
+    /**
      * 在这里你可以验证握手的请求信息
      * - 必须返回含有两个元素的array
      *  - 第一个元素的值来决定是否进行握手
@@ -88,7 +93,7 @@ class GameController implements HandlerInterface
             }
             //保存登陆信息
             $this->user_info[$uinfo['account']] = $uinfo;
-            cache()->set($user_info_key, json_encode($uinfo));
+            cache()->set($user_info_key, json_encode($uinfo), self::EXPIRE);
         } else {
             $this->loginFail($server, $fd, '2');
         }
