@@ -8,7 +8,12 @@
  */
 
 return [
-    'user' => [
+    'dbproxy' => [
+        'failCount'    => 3,
+        'successCount' => 3,
+        'delayTime'    => 500,
+    ],
+    'notify' => [
         'failCount'    => 3,
         'successCount' => 3,
         'delayTime'    => 500,

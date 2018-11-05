@@ -35,5 +35,5 @@ return [
     'demoRedis' => [
         'class' => \Swoft\Redis\Redis::class,
         'poolName' => 'demoRedis'
-    ]
+    ],
 ];

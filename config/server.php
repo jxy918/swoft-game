@@ -9,7 +9,7 @@
 
 return [
     'server'  => [
-        'pfile'      => env('PFILE', '/tmp/swoft.pid'),
+        'pfile'      => env('PFILE', BASE_PATH.'/runtime/swoft.pid'),
         'pname'      => env('PNAME', 'php-swoft'),
         'tcpable'    => env('TCPABLE', true),
         'cronable'   => env('CRONABLE', false),
@@ -25,6 +25,17 @@ return [
         'open_eof_split'     => env('TCP_OPEN_EOF_SPLIT', true),
         'package_eof'        => "\r\n",
     ],
+
+    //PS:扩展游戏服务器, 注意此tcp服务器需要自己去创建实现
+    'tcp1'     => [
+        'host'               => env('TCP_HOST', '0.0.0.0'),
+        'port'               => env('TCP_PORT', 20001),
+        'type'               => env('TCP_TYPE', SWOOLE_SOCK_TCP),
+        'package_max_length' => env('TCP_PACKAGE_MAX_LENGTH', 2048),
+        'open_eof_check'     => env('TCP_OPEN_EOF_CHECK', false),
+        'package_eof'        => "\r\n",
+    ],
+
     'http'    => [
         'host'  => env('HTTP_HOST', '0.0.0.0'),
         'port'  => env('HTTP_PORT', 10000),

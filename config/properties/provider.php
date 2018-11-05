@@ -9,28 +9,28 @@
 
 return [
     'consul' => [
-        'address' => '',
+        'address' => '192.168.7.197',
         'port'    => 8500,
         'register' => [
-            'id'                => '',
-            'name'              => '',
-            'tags'              => [],
+            'id'                => 'notify',
+            'name'              => 'notify',
+            'tags'              => ['notify'],
             'enableTagOverride' => false,
             'service'           => [
-                'address' => 'localhost',
+                'address' => '192.168.7.197',
                 'port'   => '20000',
             ],
             'check'             => [
-                'id'       => '',
-                'name'     => '',
-                'tcp'      => 'localhost:20000',
+                'id'       => 'notify',
+                'name'     => 'notify',
+                'tcp'      => '192.168.7.197:20000',
                 'interval' => 10,
                 'timeout'  => 1,
             ],
         ],
         'discovery' => [
-            'name' => 'user',
-            'dc' => 'dc',
+            'name' => 'notify',
+            'dc' => 'dc1',
             'near' => '',
             'tag' =>'',
             'passing' => true

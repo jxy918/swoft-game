@@ -23,7 +23,6 @@ use App\Game\Core\Dispatch;
 use App\Game\Core\Log;
 use App\Game\Conf\MainCmd;
 use App\Game\Conf\SubCmd;
-use App\Game\Conf\GameConst;
 
 use App\Middlewares\GameMiddleware;
 
@@ -106,26 +105,23 @@ class GameController implements HandlerInterface
      */
     public function onMessage(Server $server, Frame $frame)
     {
+        Log::show(" Message: client #{$frame->fd} push success Mete: \n{");
         $data = Packet::packDecode($frame->data);
         if(isset($data['code']) && $data['code'] == 0 && isset($data['msg']) && $data['msg'] == 'OK') {
             Log::show('Recv <<<  cmd='.$data['cmd'].'  scmd='.$data['scmd'].'  len='.$data['len'].'  data='.json_encode($data['data']));
             //转发请求，代理模式处理,websocket路由到相关逻辑
             $data['serv'] = $server;
-            $data['protocol'] = GameConst::GM_PROTOCOL_WEBSOCK;
             $obj = new Dispatch($data);
-            $back = '';
+            $back = "<center><h1>404 Not Found </h1></center><hr><center>swoft</center>\n";
             if(!empty($obj->getStrategy())) {
                 $back = $obj->exec();
                 $server->push($frame->fd, $back, WEBSOCKET_OPCODE_BINARY);
-            } else {
-                if ($data['protocol'] == GameConst::GM_PROTOCOL_HTTP) {;
-                    $back = "<center><h1>404 Not Found </h1></center><hr><center>swoole/2.1.3</center>\n";
-                }
             }
-            Log::show('Tcp Strategy <<<  data='.$back, GameConst::GM_LOG_LEVEL_DEBUG);
+            Log::show('Tcp Strategy <<<  data='.$back);
         } else {
             Log::show($data['msg']);
         }
+        Log::split('}');
     }
 
     /**
@@ -151,7 +147,6 @@ class GameController implements HandlerInterface
      */
     public function onRequest(Request $request, Response $response)
     {
-
         var_dump($request['server']);
     }
 

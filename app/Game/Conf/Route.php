@@ -14,11 +14,12 @@ class Route
      * websocket路由配置，websocke配置和tcp配置需要先去配置（MainCmd)主命令子和(SubCmdSys)子主命令字配置文件
      * @var array
      */
-    public static $websock_map = array(
+    public static $cmd_map = array(
         //系统请求
         MainCmd::CMD_SYS => array(
             SubCmd::HEART_ASK_REQ =>'HeartAsk',
         ),
+        //游戏请求
         MainCmd::CMD_GAME => array(
             SubCmd::GET_CARD_REQ =>'GetCard',
             SubCmd::SEND_CARD_REQ =>'SendCard',
@@ -28,7 +29,5 @@ class Route
             SubCmd::GET_SINGER_CARD_REQ =>'GetSingerCard',
             SubCmd::CHAT_MSG_REQ =>'ChatMsg',
         ),
-
-
     );
 }

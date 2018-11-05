@@ -24,10 +24,22 @@ class Log
      * @param string $centent
      * @param int $level
      */
-    public static function show($centent = '', $level = 1)
+    public static function show($centent = '', $level = 1, $str = '')
     {
         if($level >= self::$level) {
-            echo date('Y/m/d H:i:s') . ' [' . self::$level_info[$level] . ']  ' . $centent . "\n";
+            echo $str.date('Y/m/d H:i:s') . " [\033[0;36m" . self::$level_info[$level] . "\033[0m]  " . $centent . "\n";
+        }
+    }
+
+    /**
+     *  显示日志
+     * @param string $centent
+     * @param int $level
+     */
+    public static function split($split = '', $level = 1)
+    {
+        if($level >= self::$level) {
+            echo $split . "\n";
         }
     }
 }

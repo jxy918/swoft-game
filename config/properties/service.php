@@ -8,11 +8,11 @@
  */
 
 return [
-    'user' => [
-        'name'        => 'user',
+    'dbproxy' => [
+        'name'        => 'dbproxy',
         'uri'         => [
-            '127.0.0.1:20000',
-            '127.0.0.1:20000',
+            '192.168.7.197:8099',
+            '192.168.7.197:8099',
         ],
         'minActive'   => 8,
         'maxActive'   => 8,
@@ -20,8 +20,24 @@ return [
         'maxWaitTime' => 3,
         'maxIdleTime' => 60,
         'timeout'     => 8,
-        'useProvider' => false,
+        'useProvider' => true,
         'balancer' => 'random',
         'provider' => 'consul',
-    ]
+    ],
+    'notify' => [
+        'name'        => 'notify',
+        'uri'         => [
+            '192.168.7.197:20000',
+            '192.168.7.197:20000',
+        ],
+        'minActive'   => 8,
+        'maxActive'   => 8,
+        'maxWait'     => 8,
+        'maxWaitTime' => 3,
+        'maxIdleTime' => 60,
+        'timeout'     => 8,
+        'useProvider' => true,
+        'balancer' => 'random',
+        'provider' => 'consul',
+    ],
 ];
