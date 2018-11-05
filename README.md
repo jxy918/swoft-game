@@ -101,13 +101,19 @@ http://[ip]:[port]/broadcast?msg=%E4%BD%A0%E5%A6%B9%E7%9A%84
 ### 七，备注
 
 * 可以使用根目录增加docker运行环境(Dockerfile)， 可以直接执行下面的命令，创建镜像php_swoole, 环境增加php-protobuf，php-msgpack支持。 
-* 注意如果程序不能自动加载，请去除环境中opcache扩展。
 
 ```
 docker build -t php_swoole .
 
 ```
+* 注意如果程序不能自动加载，请去除环境中opcache扩展。
+* 服务器增加支持TCP服务器，服务器启动就会监控TCP游戏服务器， 可以通过/test/tcp_client.php测试。
 
+```
+php ./test/tcp_client
+
+```
+    
 * 如果使用swoft的Dockerfile需要自行安装msgpack扩展
 * **[swoft框架](https://github.com/swoft-cloud/swoft/)** 
 
