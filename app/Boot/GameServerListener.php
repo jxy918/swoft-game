@@ -12,7 +12,6 @@ use Swoole\Server;
 use App\Game\Core\Packet;
 use App\Game\Core\Dispatch;
 use App\Game\Core\Log;
-use App\Game\Conf\GameConst;
 
 
 /**
@@ -73,8 +72,8 @@ class GameServerListener implements BeforeStartInterface
      */
     public function setPortSettings(array $tcpSettings)
     {
-        unset($tcpSettings['host'], $tcpSettings['port'], $tcpSettings['port1'], $tcpSettings['mode'], $tcpSettings['type']);
-        //发现问题, 这里设置参数默认应当是和主服务器一致, 不能设置, 一设置不能触发回调receive事件
+        unset($tcpSettings['host'], $tcpSettings['port'], $tcpSettings['type']);
+        //PS:问题, 这里一定要触发一下设置swoole方法, 要不然不会触发receive事件, 注意设置参数, 有些设置参数也会导致不触发receive,例如:open_eof_split
         $this->_port->set($tcpSettings);
     }
 
@@ -95,6 +94,7 @@ class GameServerListener implements BeforeStartInterface
 
     //TCP的消息处理逻辑
     public function onReceive($serv, $fd, $from_id, $data) {
+        //var_dump($data);
         Log::show(" Receive: client #{$fd} send success Mete: \n{");
         if(!empty($data)) {
             $data = Packet::packDecode($data);
