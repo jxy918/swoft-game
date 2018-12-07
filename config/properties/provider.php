@@ -25,7 +25,7 @@ return [
                 'name'     => 'notify',
                 'tcp'      => '192.168.7.197:20000',
                 'interval' => 10,
-                'timeout'  => 1,
+                'timeout'  => 2,
             ],
         ],
         'discovery' => [
