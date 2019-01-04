@@ -29,9 +29,8 @@ use App\Game\Core\Log;
  */
 class NotifyService implements NotifyInterface
 {
-    public function notify(string $msg = '')
+    public function notify(string $msg = 'this is system msg')
     {
-        $msg = 'this is system msg';
         $data = Packet::packFormat('OK', 0, $msg);
         $data = Packet::packEncode($data, MainCmd::CMD_SYS, SubCmd::BROADCAST_MSG_RESP);
         $ws_serv = App::$server->getServer();
@@ -45,6 +44,29 @@ class NotifyService implements NotifyInterface
      * @param $data
      */
     protected function pushToAll($serv, $data)
+    {
+        $client = array();
+        $start_fd = 0;
+        while(true) {
+            $conn_list = $serv->getClientList($start_fd, 10);
+            if ($conn_list===false or count($conn_list) === 0) {
+                Log::show('BroadCast finish');
+                break;
+            }
+            $start_fd = end($conn_list);
+            foreach($conn_list as $fd) {
+                //获取客户端信息
+                $client_info = $serv->getClientInfo($fd);
+                $client[$fd] = $client_info;
+                if(isset($client_info['websocket_status']) && $client_info['websocket_status'] == 3) {
+                    $serv->push($fd, $data, WEBSOCKET_OPCODE_BINARY);
+                }
+            }
+        }
+        return $client;
+    }
+
+    protected function notifyMsg($serv, $data)
     {
         $client = array();
         $start_fd = 0;

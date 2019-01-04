@@ -122,7 +122,6 @@ class DbproxyController{
      * @return array
      */
     public function testNotify() {
-        //查询用户信息
         $result = $this->notifyService->notify('aaaaaaaaabbb');
         return $result;
     }

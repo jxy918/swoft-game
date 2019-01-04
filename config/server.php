@@ -29,7 +29,7 @@ return [
     //PS:扩展游戏服务器, 注意此tcp服务器需要自己去创建实现
     'tcp1'     => [
         'host'               => env('TCP_HOST', '0.0.0.0'),
-        'port'               => env('TCP_PORT', 20001),
+        'port'               => env('TCP_PORT', 20002),
         'type'               => env('TCP_TYPE', SWOOLE_SOCK_TCP),
         'package_max_length' => env('TCP_PACKAGE_MAX_LENGTH', 2048),
         'open_eof_check'     => env('TCP_OPEN_EOF_CHECK', false),
@@ -58,8 +58,8 @@ return [
         'daemonize'             => env('DAEMONIZE', 0),
         'dispatch_mode'         => env('DISPATCH_MODE', 2),
         'log_file'              => env('LOG_FILE', '@runtime/logs/swoole.log'),
-        'task_worker_num'       => env('TASK_WORKER_NUM', 1),
-        'package_max_length'    => env('PACKAGE_MAX_LENGTH', 2048),
+        'task_worker_num'       => env('TASK_WORKER_NUM', 2),
+        'package_max_length'    => env('PACKAGE_MAX_LENGTH', 20480),
         'upload_tmp_dir'        => env('UPLOAD_TMP_DIR', '@runtime/uploadfiles'),
         'document_root'         => env('DOCUMENT_ROOT', BASE_PATH . '/public'),
         'enable_static_handler' => env('ENABLE_STATIC_HANDLER', true),

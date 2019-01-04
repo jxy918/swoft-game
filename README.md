@@ -117,3 +117,19 @@ php ./test/tcp_client
 * 如果使用swoft的Dockerfile需要自行安装msgpack扩展
 * **[swoft框架](https://github.com/swoft-cloud/swoft/)** 
 
+### 八，增加录像直播功能, 此功能只是测试
+
+* 1, 视频录制url，如果电脑没有摄像头， 请用手机测试录制视频：
+
+````
+http://[ip]:[port]/camera
+````
+
+* 2，浏览器上播放视频url如下：
+
+```
+http://[ip]:[port]/show
+```
+
+
+

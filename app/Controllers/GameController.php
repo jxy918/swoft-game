@@ -26,6 +26,7 @@ use App\Game\Core\Packet;
 use App\Game\Conf\MainCmd;
 use App\Game\Conf\SubCmd;
 use App\Game\Core\Log;
+use Swoft\HttpClient\Client;
 
 /**
  * Class GameController
@@ -38,6 +39,11 @@ class GameController{
      * @var null
      */
     public $userinfo = array();
+
+    /**
+     * consul 发现服务url
+     */
+    const DISCOVERY_PATH = 'http://127.0.0.1:8500/v1/health/service/%s?passing=1&dc=dc1&near';
 
     /**
      * this is a example view, test view
@@ -104,7 +110,7 @@ class GameController{
     }
 
     /**
-     * this is a example view, test view
+     * 广播当前服务器消息
      * @RequestMapping(route="/broadcast", method=RequestMethod::GET)
      * @return array
      */
@@ -171,5 +177,82 @@ class GameController{
             }
         }
         return $client;
+    }
+
+    /**
+     * 广播全服
+     * @RequestMapping(route="/broadcast_to_all", method=RequestMethod::GET)
+     * @return array
+     */
+    public function broadcastToAll(Request $request)
+    {
+        $msg = $request->query('msg');
+        $msg = !empty($msg) ? $msg : "this is a system msg";
+        //走consul注册发现服务器来广播消息，获取服务器列表
+        $serviceList = $this->getServiceList();
+        $result = [];
+        //采用http循环发送消息
+        foreach($serviceList as $v) {
+            $notify_url = "http://{$v}/broadcast?msg={$msg}";
+            $httpClient = new Client();
+            $result[$v]     = $httpClient->get($notify_url)->getResult();
+        }
+        return $result;
+    }
+
+    /**
+     * get service list, 默认就是游戏网关服务器的consul服务器name
+     *
+     * @param string $serviceName
+     * @return array
+     */
+    public function getServiceList($serviceName = 'gateway')
+    {
+        $httpClient = new Client();
+        $url        = sprintf(self::DISCOVERY_PATH, $serviceName);
+        $result     = $httpClient->get($url)->getResult();
+        $services   = json_decode($result, true);
+
+        // 数据格式化
+        $nodes = [];
+        foreach ($services as $service) {
+            if (!isset($service['Service'])) {
+                App::warning("consul[Service] 服务健康节点集合，数据格式不不正确，Data=" . $result);
+                continue;
+            }
+            $serviceInfo = $service['Service'];
+            if (!isset($serviceInfo['Address'], $serviceInfo['Port'])) {
+                App::warning("consul[Address] Or consul[Port] 服务健康节点集合，数据格式不不正确，Data=" . $result);
+                continue;
+            }
+            $address = $serviceInfo['Address'];
+            $port    = $serviceInfo['Port'];
+
+            $uri     = implode(":", [$address, $port]);
+            $nodes[] = $uri;
+        }
+        return $nodes;
+    }
+
+    /**
+     * this is a example view, test view
+     * @RequestMapping(route="/camera", method={RequestMethod::GET})
+     * @View(template="vedio/camera")
+     * @return array
+     */
+    public function camera(Request $request, Response $response)
+    {
+        return [];
+    }
+
+    /**
+     * this is a example view, test view
+     * @RequestMapping(route="/show", method={RequestMethod::GET})
+     * @View(template="vedio/show")
+     * @return array
+     */
+    public function show(Request $request, Response $response)
+    {
+        return [];
     }
 }
