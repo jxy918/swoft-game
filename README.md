@@ -96,7 +96,7 @@ http://[ip]:[port]/broadcast?msg=%E4%BD%A0%E5%A6%B9%E7%9A%84
 
 ### 六，联系方式
 
-* qq：251413215
+* qq：251413215，加qq请输入验证消息：swoft-game
 
 ### 七，备注
 
