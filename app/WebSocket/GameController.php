@@ -115,7 +115,9 @@ class GameController implements HandlerInterface
             $back = "<center><h1>404 Not Found </h1></center><hr><center>swoft</center>\n";
             if(!empty($obj->getStrategy())) {
                 $back = $obj->exec();
-                $server->push($frame->fd, $back, WEBSOCKET_OPCODE_BINARY);
+				if($back) {
+					$server->push($frame->fd, $back, WEBSOCKET_OPCODE_BINARY);
+				}
             }
             Log::show('Tcp Strategy <<<  data='.$back);
         } else {
