@@ -1,0 +1,42 @@
+{
+  "name": "swoft/http-message",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft",
+    "psr7",
+    "http-message"
+  ],
+    "description": "swoft http message component",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">7.1.0",
+    "psr/http-message": "^1.0",
+    "psr/http-server-handler": "^1.0",
+    "psr/http-server-middleware": "^1.0",
+    "swoft/stdlib": "~2.0.0"
+  },
+  "autoload": {
+    "classmap": [
+    ],
+    "psr-4": {
+      "Swoft\\Http\\Message\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Http\\Message\\Unit\\": "test/unit/",
+      "SwoftTest\\Http\\Message\\Testing\\": "test/testing/"
+    }
+  },
+  "repositories": {
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit -c phpunit.xml"
+  }
+}

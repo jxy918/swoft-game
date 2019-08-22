@@ -1,0 +1,38 @@
+{
+  "name": "swoft/redis",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft",
+    "redis"
+  ],
+  "description": "swoft redis component",
+  "license": "Apache-2.0",
+  "require": {
+    "swoft/framework": "~2.0.0",
+    "swoft/connection-pool": "~2.0.0"
+  },
+  "autoload": {
+    "classmap": [
+    ],
+    "psr-4": {
+      "Swoft\\Redis\\": "src/"
+    },
+    "files": [
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Redis\\Unit\\": "test/unit",
+      "SwoftTest\\Redis\\Testing\\": "test/testing"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "scripts": {
+    "test": "php run.php -c phpunit.xml"
+  }
+}

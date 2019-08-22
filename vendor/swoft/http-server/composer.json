@@ -1,0 +1,34 @@
+{
+  "name": "swoft/http-server",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft"
+  ],
+    "description": "swoft http server component",
+  "license": "Apache-2.0",
+  "require": {
+    "swoft/framework": "~2.0.0",
+    "swoft/http-message": "~2.0.0",
+    "swoft/validator": "~2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Swoft\\Http\\Server\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Http\\Server\\Unit\\": "test/unit/",
+      "SwoftTest\\Http\\Server\\Testing\\": "test/testing/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit -c phpunit.xml"
+  }
+}

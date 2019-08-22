@@ -1,0 +1,39 @@
+{
+  "name": "swoft/db",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft",
+    "db",
+    "orm",
+    "active record"
+  ],
+  "description": "swoft database component",
+  "license": "Apache-2.0",
+  "require": {
+    "swoft/framework": "~2.0.0",
+    "swoft/connection-pool": "~2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Swoft\\Db\\": "src/"
+    },
+    "files": [
+      "src/Helper/Functions.php"
+    ]
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Db\\Testing\\": "test/testing",
+      "SwoftTest\\Db\\Unit\\": "test/unit"
+    }
+  },
+  "scripts": {
+    "test": "php run.php -c phpunit.xml"
+  }
+}

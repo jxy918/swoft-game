@@ -1,0 +1,12 @@
+1: IN = 4
+{if boolVal == TRUE}
+2: IN
+{else}
+3: OUT
+{/if}
+{if boolVal == FALSE}
+4: OUT
+{else}
+5: IN
+{/if}
+6: IN

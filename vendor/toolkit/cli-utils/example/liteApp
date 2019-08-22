@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+
+define('BASE_PATH', dirname(__DIR__));
+
+require dirname(__DIR__) . '/test/boot.php';
+
+// create app instance
+$app = new Toolkit\Cli\App;
+
+// register commands
+$app->addCommand('test', function ($app) {
+    echo "args:\n";
+    /** @var Toolkit\Cli\App $app */
+    print_r($app->getArgs());
+
+}, 'the description text for the command: test');
+
+$app->addCommand('test1', function () {
+    echo "hello\n";
+}, 'the description text for the command: test1');
+
+// run
+$app->run();

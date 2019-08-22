@@ -1,0 +1,39 @@
+{
+    "name": "swoft/i18n",
+    "type": "library",
+  "version": "v2.0.5",
+    "keywords": [
+        "php",
+        "swoole",
+        "swoft",
+        "i18n",
+        "translation"
+    ],
+    "description": "swoft i18n component",
+    "license": "Apache-2.0",
+    "require": {
+        "php": ">=7.1",
+        "swoft/framework": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Swoft\\I18n\\": "src/"
+        },
+        "files": [
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SwoftTest\\I18n\\Testing\\": "test/testing",
+            "SwoftTest\\I18n\\Unit\\": "test/unit"
+        }
+    },
+    "repositories": [
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit -c phpunit.xml"
+    }
+}

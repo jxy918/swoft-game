@@ -1,0 +1,62 @@
+language: php
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+      - mysql-client
+before_install:
+  - sudo mysql -e "use mysql; update user set authentication_string=PASSWORD('swoft123456') where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
+  - sudo mysql_upgrade -u root -pswoft123456
+  - sudo service mysql restart
+  - mysql -uroot -pswoft123456 -e 'CREATE DATABASE IF NOT EXISTS test;
+    USE test;
+    CREATE TABLE `user` (
+    `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+    `name` varchar(20) CHARACTER SET utf8mb4 NOT NULL DEFAULT "",
+    `age` int(11) NOT NULL DEFAULT '0',
+    `password` varchar(100) CHARACTER SET utf8mb4 NOT NULL DEFAULT "",
+    `user_desc` varchar(120) CHARACTER SET utf8mb4 NOT NULL DEFAULT "",
+    `add` int(3) DEFAULT NULL,
+    `hahh` int(11) DEFAULT '1',
+    `test_json` json DEFAULT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    CREATE TABLE `count` (
+      `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+      `user_id` int(11) DEFAULT NULL,
+      `create_time` int(11) DEFAULT NULL,
+      `attributes` varchar(244) DEFAULT NULL,
+      `update_time` timestamp NULL DEFAULT NULL,
+      PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+    CREATE DATABASE IF NOT EXISTS test2;
+    USE test2;
+    CREATE TABLE `user` (
+    `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+    `name` varchar(20) CHARACTER SET utf8mb4 NOT NULL DEFAULT "",
+    `age` int(11) NOT NULL DEFAULT '0',
+    `password` varchar(100) CHARACTER SET utf8mb4 NOT NULL DEFAULT "",
+    `user_desc` varchar(120) CHARACTER SET utf8mb4 NOT NULL DEFAULT "",
+    `add` int(3) DEFAULT NULL,
+    `hahh` int(11) DEFAULT '1',
+    `test_json` json DEFAULT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;'
+install:
+  - wget https://github.com/swoole/swoole-src/archive/v4.4.1.tar.gz -O swoole.tar.gz && mkdir -p swoole && tar -xf swoole.tar.gz -C swoole --strip-components=1 && rm swoole.tar.gz && cd swoole && phpize && ./configure && make -j$(nproc) && make install && cd -
+  - echo "extension = swoole.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+
+before_script:
+  - composer config -g process-timeout 9000 && composer update
+  - phpenv config-rm xdebug.ini
+
+
+script:
+  - composer test

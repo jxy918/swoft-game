@@ -1,0 +1,41 @@
+{
+  "name": "swoft/console",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft",
+    "console"
+  ],
+  "description": "swoft connection pool component",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">7.1.0",
+    "ext-mbstring": "*",
+    "toolkit/cli-utils": "~1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Swoft\\Console\\": "src/"
+    },
+    "files": [
+      "src/Helper/Functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Console\\Unit\\": "test/unit/",
+      "SwoftTest\\Console\\Testing\\": "test/testing/"
+    }
+  },
+  "repositories": [
+  ],
+  "require-dev": {
+    "swoft/swoole-ide-helper": "dev-master",
+    "phpunit/phpunit": "^7.5"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit -c phpunit.xml"
+  }
+}

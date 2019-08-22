@@ -1,0 +1,29 @@
+{
+    "name": "text/template",
+    "type": "library",
+    "description": "Simple and secure string-template-engine (Twig-like syntax) with nested if/elseif/else, loops, filters. Simple OOP api: Just one class doing the job (2-lines of code). Fast and secure: No code-generation, no eval'ed() code. Extensible by callbacks. Fully tested. Rich examples included.",
+    "keywords": ["text", "template", "render", "mail", "if", "for", "loop", "filter", "smarty", "twig"],
+    "homepage": "http://text-template.pub.leuffen.de",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthias Leuffen",
+            "email": "matthes@leuffen.de"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "ext-pcre": "*"
+    },
+    "require-dev": {
+        "nette/tester": "*",
+        "satooshi/php-coveralls": "*",
+        "phpunit/phpcov": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leuffen\\TextTemplate\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

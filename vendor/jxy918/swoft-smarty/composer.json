@@ -1,0 +1,40 @@
+{
+    "name": "jxy918/swoft-smarty",
+    "description": "smarty view base on swoft",
+    "type": "library",
+    "version": "v2.0.1",
+    "keywords": [
+        "php",
+        "swoole",
+        "swoft",
+        "view",
+        "smarty"
+    ],
+    "require": {
+        "swoft/framework": "^2.0.2",
+        "smarty/smarty": "^3.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jxy918",
+            "email": "jxy918@163.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Swoft\\Smarty\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SwoftTest\\Smarty\\": "test/unit"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit -c phpunit.xml"
+    }
+}

@@ -1,0 +1,5 @@
+1: Start
+2: curVal = a
+2: curVal = b
+2: curVal = c
+5: Some other text

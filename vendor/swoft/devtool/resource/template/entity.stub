@@ -1,0 +1,26 @@
+<?php declare(strict_types=1);
+
+
+namespace {= namespace};
+
+use Swoft\Db\Annotation\Mapping\Column;
+use Swoft\Db\Annotation\Mapping\Entity;
+use Swoft\Db\Annotation\Mapping\Id;
+use Swoft\Db\Eloquent\Model;
+{= usespace}
+
+/**
+ * {= tableComment}
+ * Class {= entityName}
+ *
+ * @since 2.0
+ *
+ * @Entity(table="{= tableName}"{= dbPool | raw})
+ */
+class {= entityName} extends Model
+{
+{= properties | raw }
+
+{= methods | raw }
+
+}

@@ -1,0 +1,39 @@
+{
+  "name": "swoft/config",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft"
+  ],
+    "description": "swoft config component",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">7.1",
+    "vlucas/phpdotenv": "^3.4",
+    "symfony/yaml": "^4.3",
+    "swoft/stdlib": "~2.0.0"
+  },
+  "autoload": {
+    "classmap": [
+    ],
+    "psr-4": {
+      "Swoft\\Config\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Config\\Unit\\": "test/unit/",
+      "SwoftTest\\Config\\Testing\\": "test/testing/"
+    }
+  },
+  "repositories": {
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit -c phpunit.xml"
+  }
+}

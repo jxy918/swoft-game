@@ -1,0 +1,35 @@
+{
+    "name": "swoft/rpc-server",
+    "type": "library",
+  "version": "v2.0.5",
+    "keywords": [
+        "php",
+        "swoole",
+        "swoft",
+        "rpc"
+    ],
+    "description": "swoft rpc server component",
+    "license": "Apache-2.0",
+    "require": {
+        "swoft/framework": "~2.0.0",
+        "swoft/connection-pool": "~2.0.0",
+        "swoft/rpc": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Swoft\\Rpc\\Server\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SwoftTest\\Rpc\\Server\\Testing\\": "test/testing",
+            "SwoftTest\\Rpc\\Server\\Unit\\": "test/unit"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "scripts": {
+        "test": "php run.php -c phpunit.xml"
+    }
+}

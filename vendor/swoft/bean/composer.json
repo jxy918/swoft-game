@@ -1,0 +1,43 @@
+{
+  "name": "swoft/bean",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft"
+  ],
+  "description": "micro-service framework base on swoole",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">7.1.0",
+    "psr/container": "^1.0",
+    "swoft/annotation": "~2.0.0",
+    "swoft/event": "~2.0.0",
+    "swoft/stdlib": "~2.0.0"
+  },
+  "autoload": {
+    "classmap": [
+    ],
+    "psr-4": {
+      "Swoft\\Bean\\": "src/"
+    },
+    "files": [
+      "src/Helper/Functions.php"
+    ]
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Bean\\Unit\\": "test/unit/",
+      "SwoftTest\\Bean\\Testing\\": "test/testing/"
+    }
+  },
+  "repositories": {
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit -c phpunit.xml"
+  }
+}

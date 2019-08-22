@@ -1,0 +1,12 @@
+# Kickstart container config file - see https://gitub.com/infracamp/kickstart
+# Run ./kickstart.sh to start a development-container for this project
+
+version: 1
+from: "infracamp/kickstart-flavor-gaia"
+
+command:
+  build:
+    - "composer update"
+
+  test:
+    - "./vendor/bin/tester -p /usr/bin/php -c test/php.ini --coverage ./build/logs/clover.xml --coverage-src ./src -s ./test/"

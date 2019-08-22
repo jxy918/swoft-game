@@ -1,0 +1,40 @@
+{
+  "name": "swoft/event",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "psr-14",
+    "swoft"
+  ],
+  "description": "swoft event dispatcher component",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">7.1.0",
+    "swoft/stdlib": "~2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Swoft\\Event\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Event\\Unit\\": "test/unit/",
+      "SwoftTest\\Event\\Testing\\": "test/testing/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packagist.laravel-china.org"
+    }
+  ],
+  "scripts": {
+    "test": "./vendor/bin/phpunit -c phpunit.xml"
+  }
+}

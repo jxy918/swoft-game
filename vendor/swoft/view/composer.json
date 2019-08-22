@@ -1,0 +1,41 @@
+{
+  "name": "swoft/view",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft",
+    "view"
+  ],
+  "description": "micro-service framework base on swoole",
+  "license": "Apache-2.0",
+  "require": {
+    "swoft/framework": "^2.0.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Swoft\\View\\": "src/"
+    },
+    "files": [
+      "src/Helper/Functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\View\\": "test/case"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packagist.laravel-china.org"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit -c phpunit.xml"
+  }
+}

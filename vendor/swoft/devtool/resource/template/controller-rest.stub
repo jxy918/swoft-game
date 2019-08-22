@@ -1,0 +1,67 @@
+<?php declare(strict_types=1);
+{include file="file-header.stub"}
+namespace {= namespace};
+
+use Swoft\Http\Server\Bean\Annotation\Controller;
+use Swoft\Http\Server\Bean\Annotation\RequestMapping;
+use Swoft\Http\Server\Bean\Annotation\RequestMethod;
+// use Swoft\View\Bean\Annotation\View;
+// use Swoft\Http\Message\Server\Response;
+
+/**
+ * Class {= className}
+ * @Controller(prefix="{= prefix}")
+ * @package {= namespace}
+ */
+class {= className}
+{
+    /**
+     * Get data list. access uri path: {= prefix}
+     * @RequestMapping(route="{= prefix}", method=RequestMethod::GET)
+     * @return array
+     */
+    public function index(): array
+    {
+        return ['item0', 'item1'];
+    }
+
+    /**
+     * Get one by ID. access uri path: {= prefix}/{= idVar}
+     * @RequestMapping(route="{= idVar}", method=RequestMethod::GET)
+     * @return array
+     */
+    public function get(): array
+    {
+        return ['item0'];
+    }
+
+    /**
+     * Create a new record. access uri path: {= prefix}
+     * @RequestMapping(route="{= prefix}", method=RequestMethod::POST)
+     * @return array
+     */
+    public function post(): array
+    {
+        return ['id' => 2];
+    }
+
+    /**
+     * Update one by ID. access uri path: {= prefix}/{= idVar}
+     * @RequestMapping(route="{= idVar}", method=RequestMethod::PUT)
+     * @return array
+     */
+    public function put(): array
+    {
+        return ['id' => 1];
+    }
+
+    /**
+     * Delete one by ID. access uri path: {= prefix}/{= idVar}
+     * @RequestMapping(route="{= idVar}", method=RequestMethod::DELETE)
+     * @return array
+     */
+    public function del(): array
+    {
+        return ['id' => 1];
+    }
+}

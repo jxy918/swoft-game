@@ -1,0 +1,36 @@
+{
+  "name": "swoft/limiter",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft"
+  ],
+  "description": "micro-service framework base on swoole",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">7.1",
+    "swoft/stdlib": "~2.0.0",
+    "symfony/expression-language": "~4.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Swoft\\Limiter\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Limiter\\Unit\\": "test/unit/",
+      "SwoftTest\\Limiter\\Testing\\": "test/testing/"
+    }
+  },
+  "repositories": {
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit -c phpunit.xml"
+  }
+}

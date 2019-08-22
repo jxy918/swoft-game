@@ -1,0 +1,15 @@
+language: php
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+
+before_script:
+  - composer config -g process-timeout 9000 && composer update
+  - phpenv config-rm xdebug.ini
+  - yes no | pecl install swoole-4.3.4
+
+script:
+  - php --ri swoole
+  - composer test

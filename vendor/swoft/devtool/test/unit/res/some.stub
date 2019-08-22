@@ -1,0 +1,20 @@
+<?php declare(strict_types=1);
+namespace {= namespace};
+
+/**
+ * Class {= className}
+ * @Controller(prefix="{= prefix}")
+ * @package {= namespace}
+ */
+class {= className}
+{
+    /**
+     * this is a example action
+     * @RequestMapping(route="{= prefix}", method=RequestMethod::GET)
+     * @return array
+     */
+    public function index(): array
+    {
+        return ['item0', 'item1'];
+    }
+}

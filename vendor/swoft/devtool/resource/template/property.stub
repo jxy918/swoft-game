@@ -1,0 +1,8 @@
+    /**
+     * {= comment | raw}
+     {= id}
+     * @Column({= columnDetail | raw})
+     *
+     * @var {= type}
+     */
+    private {= propertyName};

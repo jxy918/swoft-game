@@ -1,0 +1,25 @@
+1:
+{print > out1}
+    AAA
+{/print}
+2:
+{print >> out2}
+    BBB
+{/print}
+{print >> out2}
+    BBB
+{/print}
+3:
+{print > out3}
+    CCC
+{/print}
+{print > out3}
+    CCC
+{/print}
+4:
+{=out1}
+5:
+{=out2}
+6:
+{=out3}
+7:

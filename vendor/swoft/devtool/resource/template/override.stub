@@ -1,0 +1,7 @@
+    // This is a saner and self-documented format for PhpStorm 2016.2 and later
+    // Try QuickDoc on these "magic" functions, or even Go to definition!
+    override({= name|raw},
+        map([
+            {= item|raw}
+        ])
+    );

@@ -1,0 +1,34 @@
+{
+  "name": "swoft/websocket-server",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft",
+    "websocket-server",
+    "websocket"
+  ],
+  "description": "swoft websocket server component",
+  "license": "Apache-2.0",
+  "require": {
+    "swoft/framework": "~2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Swoft\\WebSocket\\Server\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\WebSocket\\Server\\Unit\\": "test/unit/",
+      "SwoftTest\\WebSocket\\Server\\Testing\\": "test/testing/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "scripts": {
+    "test": "php run.php -c phpunit.xml"
+  }
+}

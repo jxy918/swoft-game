@@ -1,0 +1,35 @@
+{
+  "name": "swoft/error",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft",
+    "error-handler",
+    "exception"
+  ],
+    "description": "swoft error handle component",
+  "license": "Apache-2.0",
+  "require": {
+    "swoft/stdlib": "~2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Swoft\\Error\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Error\\Unit\\": "test/unit",
+      "SwoftTest\\Error\\Testing\\": "test/testing"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5",
+    "swoft/framework": "~2.0.0"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit -c phpunit.xml"
+  }
+}

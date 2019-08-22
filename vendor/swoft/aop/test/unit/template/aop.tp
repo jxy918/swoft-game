@@ -1,0 +1,28 @@
+<?php 
+ declare (strict_types=1);
+namespace SwoftTest\Aop\Testing;
+
+class AopClass_PROXY_proxy_id extends \SwoftTest\Aop\Testing\AopClass
+{
+    use \Swoft\Aop\Concern\AopTrait;
+    public function getOriginalClassName() : string
+    {
+        return 'SwoftTest\\Aop\\Testing\\AopClass';
+    }
+    public function Method(int $int, string $str, float $float, AopClass $aopClass) : int
+    {
+        return $this->__proxyCall('SwoftTest\\Aop\\Testing\\AopClass', 'Method', func_get_args());
+    }
+    public function MethodSelf(int $int, string $str, float $float, AopClass $aopClass) : \SwoftTest\Aop\Testing\AopClass
+    {
+        return $this->__proxyCall('SwoftTest\\Aop\\Testing\\AopClass', 'MethodSelf', func_get_args());
+    }
+    public function MethodVoid(int $int, string $str, float $float, AopClass $aopClass) : void
+    {
+        $this->__proxyCall('SwoftTest\\Aop\\Testing\\AopClass', 'MethodVoid', func_get_args());
+    }
+    public function MethodNull($int, $str, $float, $aopClass)
+    {
+        return $this->__proxyCall('SwoftTest\\Aop\\Testing\\AopClass', 'MethodNull', func_get_args());
+    }
+}

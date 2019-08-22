@@ -1,0 +1,13 @@
+#1 default      : abc123'&quot;
+#2 raw          : abc123'"
+#3 singleLine   : a b c
+#4 inivalue     : abc123\'\&quot;
+#5 html         : abc123'&amp;quot;
+#6a fixedLength : ab
+#6b fixedLength : abc123'&quot;++++++++++++++++++++++
+#7a inflect     : abc123__
+#7b inflect     : abc123__
+#7c sanitize    : abc123
+#8 strip_empty_lines
+line1
+line2

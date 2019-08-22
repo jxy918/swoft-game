@@ -1,0 +1,48 @@
+{
+  "name": "swoft/framework",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft"
+  ],
+  "description": "swoft framework component",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=7.1",
+    "swoft/config": "~2.0.0",
+    "swoft/annotation": "~2.0.0",
+    "swoft/bean": "~2.0.0",
+    "swoft/event": "~2.0.0",
+    "swoft/console": "~2.0.0",
+    "swoft/error": "~2.0.0",
+    "swoft/log": "~2.0.0",
+    "swoft/aop": "~2.0.0",
+    "swoft/server": "~2.0.0",
+    "swoft/stdlib": "~2.0.0"
+  },
+  "autoload": {
+    "classmap": [
+      "src/Swoft.php"
+    ],
+    "psr-4": {
+      "Swoft\\": "src/"
+    },
+    "files": [
+      "src/Helper/Functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Unit\\": "test/unit/",
+      "SwoftTest\\Testing\\": "test/testing/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "scripts": {
+    "test": "php run.php -c phpunit.xml"
+  }
+}

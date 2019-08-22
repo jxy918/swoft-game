@@ -1,0 +1,38 @@
+{
+  "name": "swoft/tcp-server",
+  "type": "library",
+  "version": "v2.0.5",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft"
+  ],
+  "description": "swoft tcp server component",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">7.1",
+    "swoft/framework": "~2.0.0",
+    "swoft/tcp": "~2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Swoft\\Tcp\\Server\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwoftTest\\Tcp\\Server\\Unit\\": "test/unit/",
+      "SwoftTest\\Tcp\\Server\\Testing\\": "test/testing/"
+    }
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.laravel-china.org"
+    }
+  },
+  "require-dev": {
+  },
+  "scripts": {
+  }
+}
