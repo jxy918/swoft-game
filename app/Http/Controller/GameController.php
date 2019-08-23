@@ -10,18 +10,19 @@
 
 namespace App\Http\Controller;
 
-use ReflectionException;
 use Swoft;
-use Swoft\Bean\Exception\ContainerException;
-use Swoft\Context\Context;
-use Swoft\Http\Message\ContentType;
 use Swoft\Http\Message\Response;
 use Swoft\Http\Message\Request;
 use Swoft\Http\Server\Annotation\Mapping\Controller;
 use Swoft\Http\Server\Annotation\Mapping\RequestMapping;
-use Carbon\Carbon;
 use Throwable;
+use Swoole\Coroutine\Http\Client;
 
+use App\WebSocket\Game\Core\Packet;
+use App\WebSocket\Game\Conf\MainCmd;
+use App\WebSocket\Game\Conf\SubCmd;
+use function server;
+use const WEBSOCKET_OPCODE_BINARY;
 
 /**
  * Class GameController
@@ -35,16 +36,26 @@ class GameController{
     public $userinfo = array();
 
     /**
-     * consul 发现服务url
+     * consul 发现服务ip
      */
-    const DISCOVERY_PATH = 'http://127.0.0.1:8500/v1/health/service/%s?passing=1&dc=dc1&near';
+    const DISCOVERY_IP = '192.168.7.197';
+
+    /**
+     * consul 发现服务port
+     */
+    const DISCOVERY_PORT = 8500;
+
+    /**
+     * consul 发现服务uri
+     */
+    const DISCOVERY_URI = '/v1/health/service/%s?passing=1&dc=dc1&near';
 
     /**
      * game input
      * @RequestMapping(route="/game")
      * @param Request $request
      * @param Response $response
-     * @return array|Response
+     * @return Response
      */
     public function index(Request $request, Response $response)
     {
@@ -71,7 +82,7 @@ class GameController{
             if(!empty($account)) {
                 //注册登录
                 $uinfo = array('account'=>$account);
-                $response = $this->addCookie($request,  $response, 'USER_INFO', json_encode($uinfo), 60);
+                $response = $response->withCookie('USER_INFO', json_encode($uinfo));
                 return $response->redirect('/test');
             } else {
                 $tips = '温馨提示：用户账号不能为空！';
@@ -121,62 +132,12 @@ class GameController{
         }
         $data = Packet::packFormat('OK', 0, $msg);
         $data = Packet::packEncode($data, MainCmd::CMD_SYS, SubCmd::BROADCAST_MSG_RESP);
-        $serv = App::$server->getServer();
-        $conn_client = $this->pushToAll($serv, $data);
-        return $conn_client;
+        $cnt = server()->sendToAll($data,  0,  50, WEBSOCKET_OPCODE_BINARY);
+        return ['status'=>0, 'msg'=>'给'.$cnt.'广播了消息'];
     }
 
     /**
-     * set a cookie
-     * @param Request $request
-     * @param Response $response
-     * @param string $key
-     * @param string $value
-     * @param int $expire(m)
-     */
-    protected function addCookie(Request $request, Response $response,  $key = '',  $value = '', $expire = 0)
-    {
-//        $uri = $request->getUri();
-//        $path = '/';
-//        $domain = $uri->getHost();
-//        $secure = strtolower($uri->getScheme()) === 'https';
-//        $httpOnly = false;
-//        $expire = Carbon::now()->addMinutes($expire);
-//        $cookie = new Cookie($key, $value, $expire, $path, $domain, $secure, $httpOnly);
-        $response = $response->withCookie($key, $value);
-        return $response;
-    }
-
-    /**
-     * 当connetions属性无效时可以使用此方法，服务器广播消息， 此方法是给所有的连接客户端， 广播消息，通过方法getClientList广播
-     * @param $serv
-     * @param $data
-     */
-    protected function pushToAll($serv, $data)
-    {
-        $client = array();
-        $start_fd = 0;
-        while(true) {
-            $conn_list = $serv->getClientList($start_fd, 10);
-            if ($conn_list===false or count($conn_list) === 0) {
-                Log::show('BroadCast finish');
-                break;
-            }
-            $start_fd = end($conn_list);
-            foreach($conn_list as $fd) {
-                //获取客户端信息
-                $client_info = $serv->getClientInfo($fd);
-                $client[$fd] = $client_info;
-                if(isset($client_info['websocket_status']) && $client_info['websocket_status'] == 3) {
-                    $serv->push($fd, $data, WEBSOCKET_OPCODE_BINARY);
-                }
-            }
-        }
-        return $client;
-    }
-
-    /**
-     * 广播全服
+     * 广播全服, 分布式广播, 需要安装consul注册发现服务器
      * @RequestMapping(route="/broadcast_to_all")
      * @return array
      */
@@ -189,9 +150,10 @@ class GameController{
         $result = [];
         //采用http循环发送消息
         foreach($serviceList as $v) {
-            $notify_url = "http://{$v}/broadcast?msg={$msg}";
-            $httpClient = new Client();
-            $result[$v]     = $httpClient->get($notify_url)->getResult();
+            $cli = new Client($v['ip'], $v['port']);
+            $cli->get("broadcast?msg={$msg}");
+            $result = $cli->body;
+            $cli->close();
         }
         return $result;
     }
@@ -204,9 +166,10 @@ class GameController{
      */
     public function getServiceList($serviceName = 'gateway')
     {
-        $httpClient = new Client();
-        $url        = sprintf(self::DISCOVERY_PATH, $serviceName);
-        $result     = $httpClient->get($url)->getResult();
+        $cli = new Client(self::DISCOVERY_IP, self::DISCOVERY_PORT);
+        $cli->get(sprintf(self::DISCOVERY_URI, $serviceName));
+        $result = $cli->body;
+        $cli->close();
         $services   = json_decode($result, true);
 
         // 数据格式化
@@ -223,10 +186,31 @@ class GameController{
             }
             $address = $serviceInfo['Address'];
             $port    = $serviceInfo['Port'];
-
-            $uri     = implode(":", [$address, $port]);
+            $uri     =  ['ip'=>$address, 'port'=>$port];
             $nodes[] = $uri;
         }
         return $nodes;
+    }
+
+    /**
+     * 录像页面
+     * @RequestMapping(route="/camera")
+     * @return Response
+     * @throws Throwable
+     */
+    public function camera()
+    {
+        return view('vedio/camera');
+    }
+
+    /**
+     * 直播页面
+     * @RequestMapping(route="/show")
+     * @return Response
+     * @throws Throwable
+     */
+    public function show()
+    {
+        return view('vedio/show');
     }
 }

@@ -32,7 +32,7 @@ return [
 //            'monitor' => bean(MonitorProcess::class)
         ],
         'on'       => [
-//            SwooleEvent::TASK   => bean(SyncTaskListener::class),  // Enable sync task
+            SwooleEvent::TASK   => bean(SyncTaskListener::class),  // Enable sync task
             SwooleEvent::TASK   => bean(TaskListener::class),  // Enable task must task and finish event
             SwooleEvent::FINISH => bean(FinishListener::class)
         ],
@@ -111,8 +111,15 @@ return [
         'class'   => WebSocketServer::class,
         'port'    => 18308,
         'on'      => [
-            // Enable http handle
+            // 开启处理http请求支持
             SwooleEvent::REQUEST => bean(RequestListener::class),
+            // 启用任务必须添加 task, finish 事件处理
+            SwooleEvent::TASK   => bean(TaskListener::class),
+            SwooleEvent::FINISH => bean(FinishListener::class)
+        ],
+        'listener' => [
+            // 引入 tcpServer
+            'tcp' => \bean('tcpServer')
         ],
         'debug'   => env('SWOFT_DEBUG', 0),
         /* @see WebSocketServer::$setting */
@@ -120,16 +127,29 @@ return [
             'log_file' => alias('@runtime/swoole.log'),
             'document_root' => dirname(__DIR__) . '/public/',
             'enable_static_handler' => true,
+            'worker_num'            => 2,
+            // 任务需要配置 task worker
+            'task_worker_num'       => 4,
+            'task_enable_coroutine' => true,
+            'max_request'           => 10000,
+            'package_max_length'    => 20480
         ],
     ],
     'tcpServer'         => [
         'port'  => 18309,
         'debug' => 1,
-    ],
-    /** @see \Swoft\Tcp\Protocol */
-    'tcpServerProtocol' => [
-        'type'            => \Swoft\Tcp\Packer\SimpleTokenPacker::TYPE,
-        // 'openLengthCheck' => true,
+        'on'      => [
+            // 启用任务必须添加 task, finish 事件处理
+        ],
+        'setting' => [
+            'log_file' => alias('@runtime/swoole.log'),
+            'worker_num'            => 2,
+            // 任务需要配置 task worker
+            'task_worker_num'       => 4,
+            'task_enable_coroutine' => true,
+            'max_request'           => 10000,
+            'package_max_length'    => 20480
+        ],
     ],
     'cliRouter'         => [
         // 'disabledGroups' => ['demo', 'test'],

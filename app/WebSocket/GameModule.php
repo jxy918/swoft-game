@@ -55,7 +55,6 @@ class GameModule
      * @param Request $request
      * @param int     $fd
      */
-
     public function onOpen(Request $request, int $fd): void
     {
         $cookie = $request->getCookieParams();

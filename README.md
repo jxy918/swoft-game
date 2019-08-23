@@ -49,6 +49,7 @@ composer install
 * 2，目录说明（swoft目录不具体说明）：
 
 ```
+./app/Http/Controller/GameController.php		游戏http控制器逻辑
 ./app/WebSocket/Game		    是这个整体游戏服务器逻辑
 ./app/WebSocket/Game/Conf	    逻辑配置目录, 比如:命令字, 子名字, 路由转发
 ./app/WebSocket/Game/Core		游戏路由转发,算法,解包核心类

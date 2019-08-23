@@ -24,7 +24,7 @@ class WorkerStartListener implements EventHandlerInterface
     public function handle(EventInterface $event): void
     {
         $context = context();
-
+        
         CLog::info('Worker Start context=' . get_class($context));
     }
 }
