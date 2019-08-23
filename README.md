@@ -4,6 +4,7 @@
 
 * 自己写的框架源码github：**[swoole-game](https://github.com/jxy918/swoole-game)**
 * 自己写的框架使用github：**[swoole-game-framework](https://github.com/jxy918/swoole-game-framework)**
+* 基于swoft1.x版本实现swoft-game请查看分支github：**[swoft-game](https://github.com/jxy918/swoft-game/tree/1.x)**
 
 ### 一，概述
 
