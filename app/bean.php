@@ -139,7 +139,7 @@ return [
         'port'  => 18309,
         'debug' => 1,
         'on'      => [
-            // 启用任务必须添加 task, finish 事件处理
+            SwooleEvent::RECEIVE => bean(App\Common\TcpReceiveListener::class)
         ],
         'setting' => [
             'log_file' => alias('@runtime/swoole.log'),
