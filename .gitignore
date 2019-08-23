@@ -1,6 +1,0 @@
-.idea/
-.git/
-runtime/
-vendor/
-*.lock
-public/devtool/
