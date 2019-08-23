@@ -1,9 +1,0 @@
-<?php
-return [
-    'key' => 'baseDataKey',
-    'key3' => [
-        'key1' => [
-            'key' => 'dataChildKey1'
-        ]
-    ]
-];

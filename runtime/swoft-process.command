@@ -1,1 +1,0 @@
-/usr/local/bin/php ./bin/swoft process:start

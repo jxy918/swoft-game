@@ -1,7 +1,0 @@
-<?php
-// The code for this file is to provide some code hints for phpstorm.
-
-namespace PHPSTORM_META {
-
-    {= overrides|raw}
-}
