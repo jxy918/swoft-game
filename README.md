@@ -2,7 +2,8 @@
 
 * 基于swoft框架开发游戏服务器框架（把自己写的游戏框架swoole-game，移植到swoft框架上，可以使用swoft框架的丰富组件功能）
 
-* 自己写的框架github：**[swoole-game](https://github.com/jxy918/swoole-game)**
+* 自己写的框架源码github：**[swoole-game](https://github.com/jxy918/swoole-game)**
+* 自己写的框架使用github：**[swoole-game-framework](https://github.com/jxy918/swoole-game-framework)**
 
 ### 一，概述
 
@@ -36,10 +37,10 @@
 
 >依赖swoft环境，请安装php扩展msgpack
  
-* php
+* php vresion > 7.0
 * swoole   
 * msgpack
-* swoft 
+* swoft version < 2.0
 
     
     
@@ -114,7 +115,7 @@ php ./test/tcp_client
 
 ```
     
-* 如果使用swoft的Dockerfile需要自行安装msgpack扩展
+* 请使用根目录下的Dockerfile可以直接跑, 如果使用swoft的Dockerfile需要自行安装msgpack扩展
 * **[swoft框架](https://github.com/swoft-cloud/swoft/)** 
 
 ### 八，增加录像直播功能, 此功能只是测试
