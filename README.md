@@ -56,6 +56,7 @@ composer install
 ./app/WebSocket/Game/Login		游戏路由转发逻辑协议包处理目录
 ./public/client				    测试工具view的资源文件
 ./resources/views/game		    测试工具view
+./app/Common/TcpReceiveListener.php	  重新覆盖tcp服务器路由到游戏处理逻辑
 
 ``` 
          
