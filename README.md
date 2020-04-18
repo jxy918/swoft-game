@@ -6,6 +6,7 @@
 * 自己写的框架使用github：**[swoole-game-framework](https://github.com/jxy918/swoole-game-framework)**
 * 基于swoft1.x版本实现swoft-game请查看分支github：**[swoft-game](https://github.com/jxy918/swoft-game/tree/1.x)**
 * 想关注更多游戏开发可以关注swoft-ddz斗地主：**[swoft-ddz](https://github.com/jxy918/swoft-ddz)**
+* 想关注更多游戏开发可以关注hyperf-ddz斗地主：**[hyperf-ddz](https://github.com/jxy918/hyperf-ddz)**
 
 ### 一，概述
 
